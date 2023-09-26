@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject onionInformaition;
 
-    // Update is called once per frame
-    void Update()
+    public void Close_Informaition()
     {
-        
+        onionInformaition.SetActive(false);
     }
 }

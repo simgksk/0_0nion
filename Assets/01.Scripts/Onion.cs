@@ -5,28 +5,31 @@ using UnityEngine;
 
 public class Onion : MonoBehaviour
 {
-    [SerializeField] GameObject onionPanel;
-    bool isPanel;
+    [SerializeField] GameObject onion_Information;
+
+    Vector2 pos;
+    RaycastHit2D hit;
 
     void Start()
     {
-        isPanel = onionPanel;
-        onionPanel.SetActive(false);
+        onion_Information.SetActive(false);
     }
 
     void Update()
     {
-        OnOffPanel();
+        Informaition_On();
     }
 
-    private void OnOffPanel()
+    private void Informaition_On()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButtonDown(0))
         {
-            if (isPanel)
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            hit = Physics2D.Raycast(pos, Vector2.zero);
+
+            if(hit.collider != null)
             {
-                Debug.Log("PanelON");
-                //onionPanel.SetActive(true);
+                onion_Information.SetActive(true);
             }
         }
     }
