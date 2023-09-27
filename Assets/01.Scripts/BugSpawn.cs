@@ -7,6 +7,9 @@ public class BugSpawn : MonoBehaviour
     [SerializeField] GameObject bug_Prefab;
     [SerializeField] Transform bug_Point;
 
+    float delayTime;
+    float currentTime;
+
     void Start()
     {
         
@@ -14,6 +17,13 @@ public class BugSpawn : MonoBehaviour
 
     void Update()
     {
-        GameObject bug = Instantiate(bug_Prefab, bug_Point.position, Quaternion.identity);
+        delayTime = Random.RandomRange(5, 10);
+        currentTime += Time.deltaTime;
+        
+        if (delayTime < currentTime)
+        {
+            GameObject bug = Instantiate(bug_Prefab, bug_Point.position, Quaternion.identity);
+            currentTime = 0;
+        }
     }
 }

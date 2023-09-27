@@ -7,30 +7,49 @@ public class Onion : MonoBehaviour
 {
     [SerializeField] GameObject onion_Information;
 
-    Vector2 pos;
-    RaycastHit2D hit;
+    Vector2 onion_Pos;
+    RaycastHit2D Onion_Hit;
+
+    bool isInformation;
 
     void Start()
     {
         onion_Information.SetActive(false);
+        isInformation = onion_Information;
     }
 
     void Update()
     {
-        Informaition_On();
+        OnOff_Information();
     }
 
-    private void Informaition_On()
+    private void OnOff_Information()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            hit = Physics2D.Raycast(pos, Vector2.zero);
+            onion_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Onion_Hit = Physics2D.Raycast(onion_Pos, Vector2.zero);
 
-            if(hit.collider != null)
+            if(Onion_Hit.collider != null)
             {
                 onion_Information.SetActive(true);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if(isInformation == false)
+            {
+                onion_Information.SetActive(true);
+                isInformation = true;
+            }
+            
+            else
+            {
+                onion_Information.SetActive(false);
+                isInformation = false;
+            }
+        }
+
     }
 }
