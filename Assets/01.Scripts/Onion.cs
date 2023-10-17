@@ -1,49 +1,53 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Onion : MonoBehaviour
 {
+    InputManager input;
+
     [SerializeField] GameObject onion_Information;
 
     Vector2 onion_Pos;
-    RaycastHit2D Onion_Hit;
+    RaycastHit2D onion_Hit;
 
     bool isInformation;
 
-    void Start()
+    private void Awake()
     {
+        input = GetComponent<InputManager>();
+
         onion_Information.SetActive(false);
         isInformation = onion_Information;
     }
 
-    void Update()
+    void Start()
     {
-        OnOff_Information();
+        input.onMouseDown += OnOff_Information;
+    }
+
+    private void OnDestroy()
+    {
+        input.onMouseDown -= OnOff_Information;
     }
 
     private void OnOff_Information()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            onion_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Onion_Hit = Physics2D.Raycast(onion_Pos, Vector2.zero);
+        onion_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        onion_Hit = Physics2D.Raycast(onion_Pos, Vector2.zero, 0);
 
-            if(Onion_Hit.collider != null)
-            {
-                onion_Information.SetActive(true);
-            }
+        if (onion_Hit.collider != null && onion_Hit.collider.CompareTag("Onion"))
+        {
+            onion_Information.SetActive(true);
         }
+
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(isInformation == false)
+            if (isInformation == false)
             {
                 onion_Information.SetActive(true);
                 isInformation = true;
             }
-            
+
             else
             {
                 onion_Information.SetActive(false);

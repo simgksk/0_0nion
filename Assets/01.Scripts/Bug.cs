@@ -1,25 +1,32 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Bug : MonoBehaviour
 {
+    InputManager input;
+
     float bugSpeed = 1;
 
     Vector2 bug_Pos;
     RaycastHit2D bug_Hit;
 
+    private void Awake()
+    {
+        input = GetComponent<InputManager>();
+    }
+
     void Start()
     {
-        
+        input.onMouseDown += BugDie;
+    }
+
+    private void OnDestroy()
+    {
+        input.onMouseDown -= BugDie;
     }
 
     void Update()
     {
         Move();
-        BugDie();
     }
 
     private void Move()
@@ -29,15 +36,13 @@ public class Bug : MonoBehaviour
 
     private void BugDie()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            bug_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            bug_Hit = Physics2D.Raycast(bug_Pos, Vector2.zero);
+        bug_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        bug_Hit = Physics2D.Raycast(bug_Pos, Vector2.zero, 0);
 
-            if (bug_Hit.collider != null)
-            {
-                Destroy(gameObject);
-            }
+        if (bug_Hit.collider != null && bug_Hit.collider.CompareTag("Bug"))
+        {
+            Destroy(gameObject);
         }
+
     }
 }
