@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject waterPanel;
     [SerializeField] GameObject storePanel;
     [SerializeField] GameObject miniGamePanel;
+    [SerializeField] GameObject workPanel;
 
     public void Informaition_Close()
     {
@@ -59,5 +60,15 @@ public class ButtonManager : MonoBehaviour
     {
         Debug.Log("Á¾·á");
         Application.Quit();
+    }
+
+    public void WorkPanel()
+    {
+        workPanel.SetActive(true);
+    }
+
+    public void Work_NoButton()
+    {
+        workPanel.SetActive(false);
     }
 }
