@@ -1,12 +1,13 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Bug : MonoBehaviour
+public class Bug2 : MonoBehaviour
 {
     InputManager input;
 
-    float bugSpeed = 1;
-
-    Vector2 bug_Pos;
+    Vector3 bug_Pos;
     RaycastHit2D bug_Hit;
 
     private void Awake()
@@ -24,25 +25,15 @@ public class Bug : MonoBehaviour
         input.onMouseDown -= BugDie;
     }
 
-    void Update()
-    {
-        Move();
-    }
-
-    private void Move()
-    {
-        transform.position += Vector3.right * bugSpeed * Time.deltaTime;
-    }
-
     private void BugDie()
     {
         bug_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         bug_Hit = Physics2D.Raycast(bug_Pos, Vector2.zero, 0);
 
-        if (bug_Hit.collider != null && bug_Hit.collider.CompareTag("Bug"))
+        if (bug_Hit.collider != null && bug_Hit.collider.CompareTag("Bug2"))
         {
             Destroy(gameObject);
         }
-
     }
+
 }

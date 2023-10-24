@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 3470820266415303830}
   - component: {fileID: 3470820266415303817}
   m_Layer: 0
-  m_Name: Bug
-  m_TagString: Bug
+  m_Name: Bug1
+  m_TagString: Bug1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

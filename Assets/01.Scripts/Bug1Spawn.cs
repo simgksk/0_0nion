@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BugSpawn : MonoBehaviour
+public class Bug1Spawn : MonoBehaviour
 {
     [SerializeField] GameObject bug_Prefab;
     [SerializeField] Transform bug_Point;
