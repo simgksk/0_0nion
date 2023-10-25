@@ -2314,7 +2314,7 @@ RectTransform:
   - {fileID: 1552909001}
   - {fileID: 2105732605}
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3144,10 +3144,10 @@ RectTransform:
   m_Children:
   - {fileID: 1712105733}
   - {fileID: 242116588}
-  - {fileID: 1672425956}
   - {fileID: 1591723752}
   - {fileID: 1047633753}
   - {fileID: 1635169246}
+  - {fileID: 1672425956}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3486,7 +3486,7 @@ RectTransform:
   - {fileID: 2041485952}
   - {fileID: 2487480}
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3524,7 +3524,7 @@ RectTransform:
   - {fileID: 765993215}
   - {fileID: 540316929}
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3562,7 +3562,7 @@ RectTransform:
   - {fileID: 12721415}
   - {fileID: 1845879125}
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4570,10 +4570,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug2_Prefab: {fileID: 3470820266415303826, guid: e76554ab749865742af5f60dd43988ed, type: 3}
-  bug2_Point:
-  - {fileID: 2065950353}
-  - {fileID: 1533803493}
-  - {fileID: 1453063723}
 --- !u!1 &1958311998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4634,8 +4630,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Water
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 39e984453be4207439a2301631aae930, type: 2}
+  m_sharedMaterial: {fileID: -6621583750223742583, guid: 39e984453be4207439a2301631aae930, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5028,6 +5024,7 @@ MonoBehaviour:
   storePanel: {fileID: 1845879122}
   miniGamePanel: {fileID: 2105732602}
   workPanel: {fileID: 540316926}
+  settingPanel: {fileID: 0}
 --- !u!1 &2041485951
 GameObject:
   m_ObjectHideFlags: 0

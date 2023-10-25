@@ -10,6 +10,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject storePanel;
     [SerializeField] GameObject miniGamePanel;
     [SerializeField] GameObject workPanel;
+    [SerializeField] GameObject settingPanel;
 
     public void Informaition_Close()
     {
@@ -70,5 +71,10 @@ public class ButtonManager : MonoBehaviour
     public void Work_NoButton()
     {
         workPanel.SetActive(false);
+    }
+
+    public void SettingPanel()
+    {
+        settingPanel.SetActive(true);
     }
 }
