@@ -5,10 +5,17 @@ using TMPro;
 
 public class Narration_3 : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI chat2;
+    [SerializeField] TextMeshProUGUI chat3;
     [SerializeField] GameObject narration3Panel;
 
+    Narration_4 narration4;
+
     string write;
+
+    private void Start()
+    {
+        narration4 = FindObjectOfType<Narration_4>();
+    }
 
     public void Narration3()
     {
@@ -19,6 +26,8 @@ public class Narration_3 : MonoBehaviour
     IEnumerator Text()
     {
         yield return StartCoroutine(Narration("(¶Ñ¹÷¶Ñ¹÷)"));
+        Destroy(chat3);
+        narration4.Narration4();
         
     }
 
@@ -29,7 +38,7 @@ public class Narration_3 : MonoBehaviour
         for (int i = 0; i < narration.Length; i++)
         {
             write += narration[i];
-            chat2.text = write;
+            chat3.text = write;
             yield return new WaitForSeconds(.05f);
         }
 
