@@ -9,12 +9,14 @@ public class Narration_3 : MonoBehaviour
     [SerializeField] GameObject narration3Panel;
 
     Narration_4 narration4;
+    ChangeBackGround backGround;
 
     string write;
 
     private void Start()
     {
         narration4 = FindObjectOfType<Narration_4>();
+        backGround = FindObjectOfType<ChangeBackGround>();
     }
 
     public void Narration3()
@@ -25,6 +27,7 @@ public class Narration_3 : MonoBehaviour
 
     IEnumerator Text()
     {
+        backGround.ChangeBackGround1();
         yield return StartCoroutine(Narration("(¶Ñ¹÷¶Ñ¹÷)"));
         Destroy(chat3);
         narration4.Narration4();

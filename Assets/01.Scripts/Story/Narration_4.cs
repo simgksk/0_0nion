@@ -8,7 +8,16 @@ public class Narration_4 : MonoBehaviour
     [SerializeField] TextMeshProUGUI chat4;
     [SerializeField] GameObject narration4Panel;
 
+    Narration_5 narration5;
+    ChangeBackGround backGround;
+
     string write;
+
+    private void Start()
+    {
+        narration5 = FindObjectOfType<Narration_5>();
+        backGround = FindObjectOfType<ChangeBackGround>();
+    }
 
     public void Narration4()
     {
@@ -18,8 +27,12 @@ public class Narration_4 : MonoBehaviour
 
     IEnumerator Text()
     {
+        backGround.ChangeBackGround1_Off();
+        backGround.ChangeBackGround2();
         yield return StartCoroutine(Narration("(마트 도착)"));
-        yield return StartCoroutine(Narration("일단 먼저 양파를 사자"));
+        yield return StartCoroutine(Narration("일단 먼저 양파를 사야겠다."));
+        Destroy(chat4);
+        narration5.Narration5();
 
     }
 
