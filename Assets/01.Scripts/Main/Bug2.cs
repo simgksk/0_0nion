@@ -10,6 +10,8 @@ public class Bug2 : MonoBehaviour
     Vector3 bug_Pos;
     RaycastHit2D bug_Hit;
 
+    int point = 10;
+
     private void Awake()
     {
         input = GetComponent<InputManager>();
@@ -33,6 +35,7 @@ public class Bug2 : MonoBehaviour
         if (bug_Hit.collider != null && bug_Hit.collider.CompareTag("Bug2"))
         {
             Destroy(gameObject);
+            GameManager.gameManager.AddCoin(point);
         }
     }
 

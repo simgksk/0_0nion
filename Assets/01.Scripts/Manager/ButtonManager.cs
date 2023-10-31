@@ -13,7 +13,6 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject workPanel;
     [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject inputFieldPanel;
-    [SerializeField] GameObject talkPanel;
 
     private void Start()
     {
@@ -89,11 +88,6 @@ public class ButtonManager : MonoBehaviour
     public void Work_NoButton()
     {
         workPanel.SetActive(false);
-    }
-
-    public void Talk()
-    {
-
     }
 
     public void SettingPanel()

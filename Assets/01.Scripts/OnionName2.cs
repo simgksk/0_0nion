@@ -11,4 +11,6 @@ public class OnionName2 : MonoBehaviour
     {
         onion_Name.text = OnionName1.onionName1.onion_Name;
     }
+
+    
 }

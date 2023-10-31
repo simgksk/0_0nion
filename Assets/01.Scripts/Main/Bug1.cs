@@ -5,6 +5,7 @@ public class Bug1 : MonoBehaviour
     InputManager input;
 
     float bugSpeed = 1;
+    int point = 10;
 
     Vector2 bug_Pos;
     RaycastHit2D bug_Hit;
@@ -42,6 +43,7 @@ public class Bug1 : MonoBehaviour
         if (bug_Hit.collider != null && bug_Hit.collider.CompareTag("Bug1"))
         {
             Destroy(gameObject);
+            GameManager.gameManager.AddCoin(point);
         }
 
     }
