@@ -9,12 +9,14 @@ public class Narration_6 : MonoBehaviour
     [SerializeField] GameObject narration6Panel;
 
     ChangeBackGround backGround;
+    Narration_7 narration7;
 
     string write;
 
     private void Start()
     {
         backGround = FindObjectOfType<ChangeBackGround>();
+        narration7 = FindObjectOfType<Narration_7>();
     }
 
     public void Narration6()
@@ -30,6 +32,7 @@ public class Narration_6 : MonoBehaviour
         yield return StartCoroutine(Narration("(드디어 집이다)"));
         yield return StartCoroutine(Narration("양파의 이름을 먼저 지어주자!"));
         Destroy(chat6);
+        narration7.PanelOn();
 
     }
 

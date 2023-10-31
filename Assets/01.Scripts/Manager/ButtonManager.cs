@@ -12,7 +12,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject miniGamePanel;
     [SerializeField] GameObject workPanel;
     [SerializeField] GameObject settingPanel;
-    
+    [SerializeField] GameObject inputFieldPanel;
+    [SerializeField] GameObject talkPanel;
 
     private void Start()
     {
@@ -37,7 +38,7 @@ public class ButtonManager : MonoBehaviour
     
     public void Skip_Button()
     {
-        SceneManager.LoadScene(2);
+        inputFieldPanel.SetActive(true);
     }
 
     public void Informaition_Close()
@@ -88,6 +89,11 @@ public class ButtonManager : MonoBehaviour
     public void Work_NoButton()
     {
         workPanel.SetActive(false);
+    }
+
+    public void Talk()
+    {
+
     }
 
     public void SettingPanel()
