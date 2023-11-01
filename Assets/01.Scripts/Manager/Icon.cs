@@ -11,10 +11,12 @@ public class Icon : MonoBehaviour
     [SerializeField] GameObject coinIcon;
 
     InputManager input;
+    RandomTextBox textBox;
 
     private void Awake()
     {
         input = FindObjectOfType<InputManager>();
+        textBox = FindObjectOfType<RandomTextBox>();
     }
 
     private void Start()
@@ -25,18 +27,6 @@ public class Icon : MonoBehaviour
     private void OnDestroy()
     {
         input.onGetKey_Esc -= GetKey_Esc;
-    }
-
-    private void GetKey_Esc()
-    {
-        talkPanel.SetActive(false);
-
-        talkIcon.SetActive(true);
-        waterIcon.SetActive(true);
-        storeIcon.SetActive(true);
-        minigameIcon.SetActive(true);
-        workIcon.SetActive(true);
-        coinIcon.SetActive(true);
     }
 
     public void Talk_On()
@@ -51,6 +41,19 @@ public class Icon : MonoBehaviour
         coinIcon.SetActive(false);
     }
 
+    private void GetKey_Esc()
+    {
+        talkPanel.SetActive(false);
+
+        talkIcon.SetActive(true);
+        waterIcon.SetActive(true);
+        storeIcon.SetActive(true);
+        minigameIcon.SetActive(true);
+        workIcon.SetActive(true);
+        coinIcon.SetActive(true);
+        textBox.RandomTextBoxs_Off();
+    }
+
     public void Talk_Off()
     {
         talkPanel.SetActive(false);
@@ -61,6 +64,7 @@ public class Icon : MonoBehaviour
         minigameIcon.SetActive(true);
         workIcon.SetActive(true);
         coinIcon.SetActive(true);
+        textBox.RandomTextBoxs_Off();
 
     }
 }

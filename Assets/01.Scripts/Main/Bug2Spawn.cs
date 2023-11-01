@@ -18,7 +18,7 @@ public class Bug2Spawn : MonoBehaviour
 
     void Update()
     {
-        delayTime = Random.Range(3, 5);
+        delayTime = Random.Range(20,40);
         currentTime += Time.deltaTime;
 
         if(delayTime < currentTime)

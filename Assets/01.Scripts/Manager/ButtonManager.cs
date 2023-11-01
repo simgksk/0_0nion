@@ -15,7 +15,6 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject inputFieldPanel;
     [SerializeField] GameObject exitMiniGame;
 
-
     private void Start()
     {
         Invoke("Skip_SetActive", 3);
