@@ -8,15 +8,19 @@ public class Narration_1 : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI chat;
     [SerializeField] GameObject choiceMenu;
+    [SerializeField] GameObject text; 
     string write;
 
     void Start()
     {
+        text.SetActive(false);
         StartCoroutine("Text");
     }
 
     IEnumerator Text()
     {
+        yield return new WaitForSeconds(1f);
+        text.SetActive(true);
         yield return StartCoroutine(Narration("¾Æ... Èûµé´Ù"));
         yield return StartCoroutine(Narration("¿À´Ã Àú³áÀº ¹¹ ¸ÔÁö?"));
         yield return StartCoroutine(Narration("¹» ¸ÔÀ»±î?"));

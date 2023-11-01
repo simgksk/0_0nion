@@ -13,6 +13,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject workPanel;
     [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject inputFieldPanel;
+    [SerializeField] GameObject exitMiniGame;
+
 
     private void Start()
     {
@@ -29,7 +31,7 @@ public class ButtonManager : MonoBehaviour
         Debug.Log("Á¾·á");
         Application.Quit();
     }
-
+   
     public void Skip_SetActive()
     {
         skip.SetActive(true);
@@ -93,6 +95,16 @@ public class ButtonManager : MonoBehaviour
     public void SettingPanel()
     {
         settingPanel.SetActive(true);
+    }
+    
+    public void SettingPanel_Off()
+    {
+        settingPanel.SetActive(false);
+    }
+
+    public void Exit_MiniGame()
+    {
+        SceneManager.LoadScene(2);
     }
 
     

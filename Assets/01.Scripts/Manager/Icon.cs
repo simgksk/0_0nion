@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Icon : MonoBehaviour
@@ -12,6 +10,35 @@ public class Icon : MonoBehaviour
     [SerializeField] GameObject workIcon;
     [SerializeField] GameObject coinIcon;
 
+    InputManager input;
+
+    private void Awake()
+    {
+        input = FindObjectOfType<InputManager>();
+    }
+
+    private void Start()
+    {
+        input.onGetKey_Esc += GetKey_Esc;
+    }
+
+    private void OnDestroy()
+    {
+        input.onGetKey_Esc -= GetKey_Esc;
+    }
+
+    private void GetKey_Esc()
+    {
+        talkPanel.SetActive(false);
+
+        talkIcon.SetActive(true);
+        waterIcon.SetActive(true);
+        storeIcon.SetActive(true);
+        minigameIcon.SetActive(true);
+        workIcon.SetActive(true);
+        coinIcon.SetActive(true);
+    }
+
     public void Talk_On()
     {
         talkPanel.SetActive(true);
@@ -23,7 +50,7 @@ public class Icon : MonoBehaviour
         workIcon.SetActive(false);
         coinIcon.SetActive(false);
     }
-    
+
     public void Talk_Off()
     {
         talkPanel.SetActive(false);
@@ -34,5 +61,6 @@ public class Icon : MonoBehaviour
         minigameIcon.SetActive(true);
         workIcon.SetActive(true);
         coinIcon.SetActive(true);
+
     }
 }

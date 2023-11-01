@@ -29,17 +29,13 @@ public class Onion : MonoBehaviour
         input.onMouseDown -= OnOff_Information;
     }
 
-    private void OnOff_Information()
+    private void Update()
     {
-        onion_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        onion_Hit = Physics2D.Raycast(onion_Pos, Vector2.zero, 0);
+        GetKey_E();
+    }
 
-        if (onion_Hit.collider != null && onion_Hit.collider.CompareTag("Onion"))
-        {
-            onion_Information.SetActive(true);
-        }
-
-
+    private void GetKey_E()
+    {
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (isInformation == false)
@@ -53,6 +49,17 @@ public class Onion : MonoBehaviour
                 onion_Information.SetActive(false);
                 isInformation = false;
             }
+        }
+    }
+
+    private void OnOff_Information()
+    {
+        onion_Pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        onion_Hit = Physics2D.Raycast(onion_Pos, Vector2.zero, 0);
+
+        if (onion_Hit.collider != null && onion_Hit.collider.CompareTag("Onion"))
+        {
+            onion_Information.SetActive(true);
         }
 
     }
