@@ -8,10 +8,8 @@ public class Water : MonoBehaviour
 {
     Animator water;
 
-    float delayTime = 5;
-    float amount = 1;
-    float startTime;
-    bool isAnimating = false;
+    float playAnimTime = .02f;
+    float stopAnimTime = 10;
 
     void Start()
     {
@@ -20,20 +18,22 @@ public class Water : MonoBehaviour
 
     void Update()
     {
-        Decrease();
+        StartCoroutine(Decrease());
         
     }
 
-    private void Decrease()
+    IEnumerator Decrease()
     {
-        if (!isAnimating)
+        while (true)
         {
-            if(Time.time >= startTime + delayTime)
-            {
-                water.SetFloat("ShrinkAmount", amount);
-                water.SetTrigger("ShrinkWater");
-                isAnimating = true;
-            }
+           /* water.Play("Water_Shrink", (int)playAnimTime);
+            yield return new WaitForSeconds(playAnimTime);
+            water.StopPlayback();
+            yield return new WaitForSeconds(stopAnimTime);
+            water.Play("Water_Shrink");
+            yield return new WaitForSeconds(playAnimTime);*/
         }
+
+        yield return null;
     }
 }
