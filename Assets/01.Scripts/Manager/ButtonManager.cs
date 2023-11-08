@@ -15,8 +15,11 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject inputFieldPanel;
     [SerializeField] GameObject exitMiniGame;
 
+    Water waterAnim;
+
     private void Start()
     {
+        waterAnim = FindObjectOfType<Water>();
         Invoke("Skip_SetActive", 3);
     }
 
@@ -49,6 +52,12 @@ public class ButtonManager : MonoBehaviour
     public void WaterPanel()
     {
         waterPanel.SetActive(true);
+    }
+    
+    public void Water_YesButton()
+    {
+        waterPanel.SetActive(false);
+        waterAnim.Increase();
     }
     
     public void Water_NoButton()

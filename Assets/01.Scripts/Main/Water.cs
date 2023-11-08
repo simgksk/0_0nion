@@ -7,18 +7,23 @@ using DG.Tweening;
 public class Water : MonoBehaviour
 {
     Animator water;
+    
 
-    float playAnimTime = .02f;
-    float stopAnimTime = 10;
+    float playAnimTime = .1f;
+    float stopAnimTime = 3;
+
+    bool isPlayingAnim = false;
 
     void Start()
     {
         water = GetComponent<Animator>();
+
+        isPlayingAnim = water;
+        StartCoroutine(Decrease());
     }
 
     void Update()
     {
-        StartCoroutine(Decrease());
         
     }
 
@@ -26,14 +31,23 @@ public class Water : MonoBehaviour
     {
         while (true)
         {
-           /* water.Play("Water_Shrink", (int)playAnimTime);
-            yield return new WaitForSeconds(playAnimTime);
-            water.StopPlayback();
-            yield return new WaitForSeconds(stopAnimTime);
             water.Play("Water_Shrink");
-            yield return new WaitForSeconds(playAnimTime);*/
+            isPlayingAnim = true;
+            yield return new WaitForSeconds(playAnimTime);
+
+            water.speed = 0;
+            isPlayingAnim = false;
+            yield return new WaitForSeconds(stopAnimTime);
+
+            water.speed = 1;
+            isPlayingAnim = true;
+            yield return new WaitForSeconds(playAnimTime);
         }
 
-        yield return null;
+    }
+
+    public void Increase()
+    {
+        water.speed = -1;
     }
 }
