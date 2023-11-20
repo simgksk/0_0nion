@@ -8,6 +8,7 @@ TagManager:
   - Bug1
   - Bug2
   - Soil
+  - Dust
   layers:
   - Default
   - TransparentFX
