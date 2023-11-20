@@ -7,7 +7,7 @@ using DG.Tweening;
 public class Water : MonoBehaviour
 {
     Animator water;
-    
+
 
     float playAnimTime = .1f;
     float stopAnimTime = 3;
@@ -19,15 +19,15 @@ public class Water : MonoBehaviour
         water = GetComponent<Animator>();
 
         isPlayingAnim = water;
-        StartCoroutine(Decrease());
+        Decrease();
     }
 
-    void Update()
+    private void Decrease()
     {
-        
+        StartCoroutine(DecreaseRoutine());
     }
 
-    IEnumerator Decrease()
+    IEnumerator DecreaseRoutine()
     {
         while (true)
         {
@@ -48,6 +48,19 @@ public class Water : MonoBehaviour
 
     public void Increase()
     {
-        water.speed = -1;
+        StartCoroutine(IncreaseRoutine());
+    }
+
+    IEnumerator IncreaseRoutine()
+    {
+        while (true)
+        {
+            water.SetFloat("water", -1);
+            water.Play("Water_Shrink");
+
+            yield return new WaitForSeconds(stopAnimTime);
+
+            Decrease();
+        }
     }
 }

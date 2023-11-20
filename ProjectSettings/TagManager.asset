@@ -7,6 +7,7 @@ TagManager:
   - Onion
   - Bug1
   - Bug2
+  - Soil
   layers:
   - Default
   - TransparentFX

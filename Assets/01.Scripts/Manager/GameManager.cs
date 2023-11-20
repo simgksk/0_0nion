@@ -17,11 +17,14 @@ public class GameManager : MonoBehaviour
         if(gameManager == null)
         {
             gameManager = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            if (gameManager != this)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

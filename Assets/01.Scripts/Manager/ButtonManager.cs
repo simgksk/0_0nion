@@ -11,15 +11,18 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject storePanel;
     [SerializeField] GameObject miniGamePanel;
     [SerializeField] GameObject workPanel;
+    [SerializeField] GameObject workTimer;
     [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject inputFieldPanel;
     [SerializeField] GameObject exitMiniGame;
 
     Water waterAnim;
+    WorkTime workTime;
 
     private void Start()
     {
         waterAnim = FindObjectOfType<Water>();
+        workTime = FindObjectOfType<WorkTime>();
         Invoke("Skip_SetActive", 3);
     }
 
@@ -98,6 +101,12 @@ public class ButtonManager : MonoBehaviour
     public void Work_NoButton()
     {
         workPanel.SetActive(false);
+    }
+    
+    public void Work_YesButton()
+    {
+        workPanel.SetActive(false);
+        workTimer.SetActive(true);
     }
 
     public void SettingPanel()

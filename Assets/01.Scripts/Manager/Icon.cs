@@ -67,4 +67,14 @@ public class Icon : MonoBehaviour
         textBox.RandomTextBoxs_Off();
 
     }
+
+    public void Store_On()
+    {
+        workIcon.SetActive(false);
+    }
+    
+    public void Store_Off()
+    {
+        workIcon.SetActive(true);
+    }
 }
