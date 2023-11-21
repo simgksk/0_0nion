@@ -3,32 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager gameManager = null;
-
     [SerializeField] TextMeshProUGUI coinText;
     int coin = 100;
 
+    // Singleton pattern
+    static GameManager _instance = null;
+    public static GameManager Instance() { return _instance; }
+
     private void Awake()
     {
-        if(gameManager == null)
+        if (_instance == null)
         {
-            gameManager = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            if (gameManager != this)
-            {
+            if (this != _instance)
                 Destroy(gameObject);
-            }
         }
     }
 
     private void Start()
+    {
+        InitializeGameState();
+    }
+
+    private void InitializeGameState()
     {
         UpdateCoinText();
     }
@@ -44,4 +49,15 @@ public class GameManager : MonoBehaviour
         UpdateCoinText();
     }
 
+    public int GetCoin() { return coin; }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        UpdateCoinText();
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }

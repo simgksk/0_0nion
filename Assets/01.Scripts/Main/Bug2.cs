@@ -35,7 +35,8 @@ public class Bug2 : MonoBehaviour
         if (bug_Hit.collider != null && bug_Hit.collider.CompareTag("Bug2"))
         {
             Destroy(gameObject);
-            GameManager.gameManager.AddCoin(point);
+            GameManager.Instance().AddCoin(10);
+            int myResult = GameManager.Instance().GetCoin();
         }
     }
 

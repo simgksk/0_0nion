@@ -10,8 +10,10 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject waterPanel;
     [SerializeField] GameObject storePanel;
     [SerializeField] GameObject miniGamePanel;
+    [SerializeField] GameObject stopMiniGamePanel;
     [SerializeField] GameObject workPanel;
     [SerializeField] GameObject workTimer;
+    [SerializeField] GameObject workGetPayPanel;
     [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject inputFieldPanel;
     [SerializeField] GameObject exitMiniGame;
@@ -90,10 +92,27 @@ public class ButtonManager : MonoBehaviour
     {
         miniGamePanel.SetActive(false);
     }
+
+    public void Exit_MiniGame()
+    {
+        stopMiniGamePanel.SetActive(true);
+    }
+
+    public void StopMiniGame_Yes()
+    {
+        stopMiniGamePanel.SetActive(false);
+        SceneManager.LoadScene(2);
+    }
     
+    public void StopMiniGame_No()
+    {
+        stopMiniGamePanel.SetActive(false);
+    }
+
     public void MiniGamePanel_YesButton()
     {
-        SceneManager.LoadScene(3);
+        int rd = Random.Range(3, 5);
+        SceneManager.LoadScene(rd);
     }
 
     public void WorkPanel()
@@ -112,6 +131,13 @@ public class ButtonManager : MonoBehaviour
         workTimer.SetActive(true);
     }
 
+    public void Work_GetPayButton()
+    {
+        workGetPayPanel.SetActive(false);
+        GameManager.Instance().AddCoin(1400);
+        int myResult = GameManager.Instance().GetCoin();
+    }
+
     public void SettingPanel()
     {
         settingPanel.SetActive(true);
@@ -122,15 +148,10 @@ public class ButtonManager : MonoBehaviour
         settingPanel.SetActive(false);
     }
 
-    public void Exit_MiniGame()
-    {
-        SceneManager.LoadScene(2);
-    }
-
     public void ClickMiniGame()
     {
         clickMiniGamePanel.SetActive(false);
         dirtySpawner.Spawner();
     }
-    
+
 }

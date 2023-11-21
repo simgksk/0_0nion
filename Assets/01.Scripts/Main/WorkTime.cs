@@ -8,8 +8,9 @@ public class WorkTime : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI[] timeText;
     [SerializeField] GameObject lockPanel;
+    [SerializeField] GameObject FinishWork;
     public GameObject timer;
-    float time = 11;
+    float time = 15;
     int min;
     int sec;
 
@@ -23,7 +24,6 @@ public class WorkTime : MonoBehaviour
     public void Update()
     {
         Timer();
-        //timer.SetActive(true);
     }
 
     public void Timer()
@@ -43,7 +43,7 @@ public class WorkTime : MonoBehaviour
         timeText[0].text = min.ToString("D2");
         timeText[1].text = sec.ToString("D2");
 
-        if(time <= 11)
+        if(time <= 15)
         {
             lockPanel.SetActive(true);
         }
@@ -51,6 +51,7 @@ public class WorkTime : MonoBehaviour
         {
             lockPanel.SetActive(false);
             timer.SetActive(false);
+            FinishWork.SetActive(true);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,9 +9,15 @@ public class DirtySpawner : MonoBehaviour
 {
     [SerializeField] GameObject soilPrefab;
     [SerializeField] GameObject dustPrefab;
+    [SerializeField] GameObject clearPanel;
 
     List<Transform> spawnPos = new List<Transform>();
     List<GameObject> spawnPrefabs = new List<GameObject>();
+
+    private void Start()
+    {
+        clearPanel.SetActive(false);
+    }
 
     public void Spawner()
     {
@@ -25,30 +32,28 @@ public class DirtySpawner : MonoBehaviour
             Spawn_Soil(i);
         }
 
-        RemoveAll();
+        RemoveAllWhenReady();
     }
 
-    private void RemoveAll()
+    private bool AllPrefabsDestroyed()
     {
-        bool allPrefabsRemoved = true;
+        return spawnPrefabs.All(prefab => prefab == null);
+    }
 
-        foreach (GameObject allPrefabs in spawnPrefabs)
-        {
-            if (allPrefabs != null)
-            {
-                allPrefabsRemoved = false;
-                break;
-            }
-        }
+    private void RemoveAllWhenReady()
+    {
+        StartCoroutine(RemoveAllCoroutine());
+    }
 
-        if (allPrefabsRemoved)
-        {
-            Debug.Log("All prefabs have been removed");
-        }
-        else
-        {
-            Debug.Log("Not all prefabs have been removed");
-        }
+    private IEnumerator RemoveAllCoroutine()
+    {
+        yield return new WaitUntil(() => AllPrefabsDestroyed());
+
+        yield return new WaitForSeconds(.5f);
+        clearPanel.SetActive(true);
+
+        GameManager.Instance().AddCoin(100);
+        int myResult = GameManager.Instance().GetCoin();
     }
 
     private void Spawn_Soil(int index)
@@ -72,5 +77,4 @@ public class DirtySpawner : MonoBehaviour
         spawnPos.RemoveAt(rd);
         spawnPrefabs.Add(dust);
     }
-
 }
