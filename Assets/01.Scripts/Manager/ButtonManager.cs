@@ -111,8 +111,13 @@ public class ButtonManager : MonoBehaviour
 
     public void MiniGamePanel_YesButton()
     {
-        int rd = Random.Range(3, 5);
-        SceneManager.LoadScene(rd);
+        //int rd = Random.Range(3, 5);
+        SceneManager.LoadScene(3);
+    }
+    
+    public void ClearMiniGame()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void WorkPanel()
