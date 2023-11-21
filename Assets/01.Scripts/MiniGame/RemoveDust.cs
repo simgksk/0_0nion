@@ -26,10 +26,9 @@ public class RemoveDust : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
                 rigid.gravityScale = 1;
-                Destroy(gameObject, 2);
+                Destroy(gameObject, 1.5f);
 
                 collider.enabled = false;
-
             }
         }
     }

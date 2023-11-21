@@ -15,14 +15,17 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject inputFieldPanel;
     [SerializeField] GameObject exitMiniGame;
+    [SerializeField] GameObject clickMiniGamePanel;
 
     Water waterAnim;
     WorkTime workTime;
+    DirtySpawner dirtySpawner;
 
     private void Start()
     {
         waterAnim = FindObjectOfType<Water>();
         workTime = FindObjectOfType<WorkTime>();
+        dirtySpawner = FindObjectOfType<DirtySpawner>();
         Invoke("Skip_SetActive", 3);
     }
 
@@ -124,5 +127,10 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void ClickMiniGame()
+    {
+        clickMiniGamePanel.SetActive(false);
+        dirtySpawner.Spawner();
+    }
     
 }
