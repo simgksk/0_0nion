@@ -3026,6 +3026,10 @@ MonoBehaviour:
   inputFieldPanel: {fileID: 0}
   exitMiniGame: {fileID: 1191957088}
   clickMiniGamePanel: {fileID: 738487226}
+  buyPanel: {fileID: 0}
+  cantBuyPanel: {fileID: 0}
+  yesBuyPanel: {fileID: 0}
+  purpleOnion: {fileID: 0}
 --- !u!4 &1623788073
 Transform:
   m_ObjectHideFlags: 0

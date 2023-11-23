@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI coinText;
     int coin = 100;
+    public int currentCoin = 0;
 
     // Singleton pattern
     static GameManager _instance = null;
@@ -21,15 +22,16 @@ public class GameManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        /*else
         {
             if (this != _instance)
                 Destroy(gameObject);
-        }
+        }*/
     }
 
     private void Start()
     {
+        currentCoin = coin;
         InitializeGameState();
     }
 
@@ -49,7 +51,10 @@ public class GameManager : MonoBehaviour
         UpdateCoinText();
     }
 
-    public int GetCoin() { return coin; }
+    public int GetCoin() 
+    {
+        return coin;
+    }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

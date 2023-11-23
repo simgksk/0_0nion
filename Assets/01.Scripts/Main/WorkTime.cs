@@ -10,7 +10,7 @@ public class WorkTime : MonoBehaviour
     [SerializeField] GameObject lockPanel;
     [SerializeField] GameObject FinishWork;
     public GameObject timer;
-    float time = 15;
+    float time = 5;
     int min;
     int sec;
 
@@ -43,7 +43,7 @@ public class WorkTime : MonoBehaviour
         timeText[0].text = min.ToString("D2");
         timeText[1].text = sec.ToString("D2");
 
-        if(time <= 15)
+        if(time <= 5)
         {
             lockPanel.SetActive(true);
         }

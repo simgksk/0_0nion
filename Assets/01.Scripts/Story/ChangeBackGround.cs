@@ -54,4 +54,9 @@ public class ChangeBackGround : MonoBehaviour
     {
         bg5.SetActive(true);
     }
+    
+    public void ChangeBackGround5_Off()
+    {
+        bg5.SetActive(false);
+    }
 }

@@ -9,6 +9,7 @@ public class Icon : MonoBehaviour
     [SerializeField] GameObject minigameIcon;
     [SerializeField] GameObject workIcon;
     [SerializeField] GameObject coinIcon;
+    [SerializeField] GameObject nameBox;
 
     InputManager input;
     RandomTextBox textBox;
@@ -76,5 +77,27 @@ public class Icon : MonoBehaviour
     public void Store_Off()
     {
         workIcon.SetActive(true);
+    }
+
+    public void MiniGame_On()
+    {
+        talkIcon.SetActive(false);
+        waterIcon.SetActive(false);
+        storeIcon.SetActive(false);
+        workIcon.SetActive(false);
+        coinIcon.SetActive(false);
+        minigameIcon.SetActive(false);
+        nameBox.SetActive(false);
+    }
+    
+    public void MiniGame_Off()
+    {
+        talkIcon.SetActive(true);
+        waterIcon.SetActive(true);
+        storeIcon.SetActive(true);
+        workIcon.SetActive(true);
+        coinIcon.SetActive(true);
+        minigameIcon.SetActive(true);
+        nameBox.SetActive(true);
     }
 }

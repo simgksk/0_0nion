@@ -17,6 +17,7 @@ public class DirtySpawner : MonoBehaviour
     private void Start()
     {
         clearPanel.SetActive(false);
+        Spawner();
     }
 
     public void Spawner()
@@ -52,7 +53,7 @@ public class DirtySpawner : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         clearPanel.SetActive(true);
 
-        GameManager.Instance().AddCoin(100);
+        GameManager.Instance().AddCoin(500);
         int myResult = GameManager.Instance().GetCoin();
     }
 

@@ -1685,10 +1685,21 @@ MonoBehaviour:
   waterPanel: {fileID: 0}
   storePanel: {fileID: 0}
   miniGamePanel: {fileID: 0}
+  stopMiniGamePanel: {fileID: 0}
   workPanel: {fileID: 0}
+  workTimer: {fileID: 0}
+  workGetPayPanel: {fileID: 0}
   settingPanel: {fileID: 0}
   inputFieldPanel: {fileID: 1735300098}
   exitMiniGame: {fileID: 0}
+  clickMiniGamePanel: {fileID: 0}
+  buyPanel: {fileID: 0}
+  cantBuyPanel: {fileID: 0}
+  yesBuyPanel: {fileID: 0}
+  miniGame: {fileID: 0}
+  miniGame_Spawn: {fileID: 0}
+  purpleOnion: {fileID: 0}
+  image: {fileID: 0}
 --- !u!4 &867238369
 Transform:
   m_ObjectHideFlags: 0

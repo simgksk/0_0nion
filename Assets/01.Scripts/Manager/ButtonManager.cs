@@ -5,25 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    [SerializeField] GameObject settingPanel;
     [SerializeField] GameObject skip;
+    [SerializeField] GameObject inputFieldPanel;
+
     [SerializeField] GameObject onionInformaition;
+
     [SerializeField] GameObject waterPanel;
     [SerializeField] GameObject storePanel;
     [SerializeField] GameObject miniGamePanel;
     [SerializeField] GameObject stopMiniGamePanel;
     [SerializeField] GameObject workPanel;
+
     [SerializeField] GameObject workTimer;
     [SerializeField] GameObject workGetPayPanel;
-    [SerializeField] GameObject settingPanel;
-    [SerializeField] GameObject inputFieldPanel;
+
     [SerializeField] GameObject exitMiniGame;
     [SerializeField] GameObject clickMiniGamePanel;
+    [SerializeField] GameObject miniGame;
+    [SerializeField] GameObject miniGame_Spawn;
+
+    [SerializeField] GameObject buyPanel;
+    [SerializeField] GameObject cantBuyPanel;
+    [SerializeField] GameObject yesBuyPanel;
+    [SerializeField] GameObject purpleOnion;
+    [SerializeField] GameObject image;
 
     Water waterAnim;
     WorkTime workTime;
     DirtySpawner dirtySpawner;
 
-    private void Start()
+    private void Awake()
     {
         waterAnim = FindObjectOfType<Water>();
         workTime = FindObjectOfType<WorkTime>();
@@ -101,7 +113,7 @@ public class ButtonManager : MonoBehaviour
     public void StopMiniGame_Yes()
     {
         stopMiniGamePanel.SetActive(false);
-        SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(2);
     }
     
     public void StopMiniGame_No()
@@ -112,14 +124,10 @@ public class ButtonManager : MonoBehaviour
     public void MiniGamePanel_YesButton()
     {
         //int rd = Random.Range(3, 5);
-        SceneManager.LoadScene(3);
+        //SceneManager.LoadScene(3);
+        miniGame.SetActive(true);
     }
     
-    public void ClearMiniGame()
-    {
-        SceneManager.LoadScene(2);
-    }
-
     public void WorkPanel()
     {
         workPanel.SetActive(true);
@@ -156,7 +164,52 @@ public class ButtonManager : MonoBehaviour
     public void ClickMiniGame()
     {
         clickMiniGamePanel.SetActive(false);
-        dirtySpawner.Spawner();
+        miniGame_Spawn.SetActive(true);
     }
 
+    public void ClearMiniGame()
+    {
+        miniGame.SetActive(false);
+        miniGamePanel.SetActive(false);
+        ClickMiniGame();
+    }
+
+    public void Buy_NoButton()
+    {
+        buyPanel.SetActive(false);
+        yesBuyPanel.SetActive(false);
+        cantBuyPanel.SetActive(false);
+    }
+
+    public void Buy2500_YesButton()
+    {
+        if(GameManager.Instance().currentCoin >= 2500)
+        {
+            buyPanel.SetActive(true);
+            yesBuyPanel.SetActive(true);
+            purpleOnion.SetActive(true);
+        }
+
+        else
+        {
+            buyPanel.SetActive(true);
+            cantBuyPanel.SetActive(true);
+        }
+    }
+    
+    public void Buy500_YesButton()
+    {
+        if(GameManager.Instance().currentCoin >= 1)
+        {
+            //buyPanel.SetActive(true);
+            yesBuyPanel.SetActive(true);
+            image.SetActive(true);
+        }
+
+        else
+        {
+            buyPanel.SetActive(true);
+            cantBuyPanel.SetActive(true);
+        }
+    }
 }
