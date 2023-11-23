@@ -165,8 +165,8 @@ GameObject:
   - component: {fileID: 2487480}
   - component: {fileID: 2487482}
   - component: {fileID: 2487481}
-  m_Layer: 5
-  m_Name: Talk_Panel
+  m_Layer: 0
+  m_Name: Chat_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 3747048}
   - component: {fileID: 3747050}
   - component: {fileID: 3747049}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,9 +451,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Work_NoButton
+      - m_Target: {fileID: 1635169247}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: Panel_off
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 12721418}
   - component: {fileID: 12721417}
   - component: {fileID: 12721416}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Store_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,21 +585,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Store_Open
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1235300997}
-        m_TargetAssemblyTypeName: Icon, Assembly-CSharp
-        m_MethodName: Store_On
+      - m_Target: {fileID: 1672425957}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: ClickIcon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -825,7 +813,7 @@ GameObject:
   - component: {fileID: 39326960}
   - component: {fileID: 39326959}
   - component: {fileID: 39326958}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Water_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,9 +885,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: WaterPanel
+      - m_Target: {fileID: 242116589}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: ClickIcon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -959,7 +947,7 @@ GameObject:
   - component: {fileID: 45530472}
   - component: {fileID: 45530471}
   - component: {fileID: 45530470}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InputField (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1134,7 @@ GameObject:
   - component: {fileID: 45551231}
   - component: {fileID: 45551233}
   - component: {fileID: 45551232}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1270,7 @@ GameObject:
   - component: {fileID: 52772250}
   - component: {fileID: 52772249}
   - component: {fileID: 52772248}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: YesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1356,7 +1344,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2024214009}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Buy_NoButton
+        m_MethodName: Buy2500_YesButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1500,7 +1488,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1235300997}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Icon, Assembly-CSharp
         m_MethodName: MiniGame_Off
         m_Mode: 1
@@ -1777,7 +1765,7 @@ GameObject:
   - component: {fileID: 88958671}
   - component: {fileID: 88958673}
   - component: {fileID: 88958672}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1990,7 +1978,7 @@ GameObject:
   - component: {fileID: 146091521}
   - component: {fileID: 146091523}
   - component: {fileID: 146091522}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2341,7 +2329,7 @@ GameObject:
   - component: {fileID: 174469913}
   - component: {fileID: 174469915}
   - component: {fileID: 174469914}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2854,7 +2842,7 @@ GameObject:
   - component: {fileID: 228017354}
   - component: {fileID: 228017356}
   - component: {fileID: 228017355}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldPanel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2932,7 +2920,7 @@ GameObject:
   - component: {fileID: 231143290}
   - component: {fileID: 231143289}
   - component: {fileID: 231143288}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: S_Close_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3004,21 +2992,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Store_Close
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1235300997}
-        m_TargetAssemblyTypeName: Icon, Assembly-CSharp
-        m_MethodName: Store_Off
+      - m_Target: {fileID: 1672425957}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: Panel_off
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3075,7 +3051,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242116588}
-  m_Layer: 5
+  - component: {fileID: 242116589}
+  m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3104,6 +3081,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &242116589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242116587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd14e8c6b65beb47bcec7137e6943c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ic0n: 0
+  waterPanel: {fileID: 1818573751}
+  storePanel: {fileID: 0}
+  chatPanel: {fileID: 0}
+  miniGamePanel: {fileID: 0}
+  workPanel: {fileID: 0}
 --- !u!1 &249372072
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,7 +3142,7 @@ GameObject:
   - component: {fileID: 256659490}
   - component: {fileID: 256659489}
   - component: {fileID: 256659488}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3237,7 +3232,7 @@ GameObject:
   - component: {fileID: 286580466}
   - component: {fileID: 286580468}
   - component: {fileID: 286580467}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3316,7 +3311,7 @@ GameObject:
   - component: {fileID: 309794347}
   - component: {fileID: 309794349}
   - component: {fileID: 309794348}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3648,7 +3643,7 @@ GameObject:
   - component: {fileID: 377387687}
   - component: {fileID: 377387689}
   - component: {fileID: 377387688}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3859,7 +3854,7 @@ GameObject:
   - component: {fileID: 387257572}
   - component: {fileID: 387257574}
   - component: {fileID: 387257573}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldPanel (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4372,7 +4367,7 @@ GameObject:
   - component: {fileID: 431783330}
   - component: {fileID: 431783329}
   - component: {fileID: 431783328}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Yes_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4525,6 +4520,45 @@ Transform:
   m_Father: {fileID: 68293215}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &447103559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447103560}
+  m_Layer: 0
+  m_Name: Buy_PurpleOnion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &447103560
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447103559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1655979124}
+  - {fileID: 635825249}
+  - {fileID: 891850597}
+  m_Father: {fileID: 1845879125}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &462443172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4536,7 +4570,7 @@ GameObject:
   - component: {fileID: 462443173}
   - component: {fileID: 462443175}
   - component: {fileID: 462443174}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4837,7 +4871,7 @@ GameObject:
   - component: {fileID: 489115007}
   - component: {fileID: 489115009}
   - component: {fileID: 489115008}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5107,7 +5141,7 @@ GameObject:
   - component: {fileID: 505085444}
   - component: {fileID: 505085446}
   - component: {fileID: 505085445}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldPanel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5299,7 +5333,7 @@ GameObject:
   - component: {fileID: 529635172}
   - component: {fileID: 529635174}
   - component: {fileID: 529635173}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5434,7 +5468,7 @@ GameObject:
   - component: {fileID: 532494951}
   - component: {fileID: 532494953}
   - component: {fileID: 532494952}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5680,7 +5714,7 @@ GameObject:
   - component: {fileID: 555173071}
   - component: {fileID: 555173073}
   - component: {fileID: 555173072}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5815,7 +5849,7 @@ GameObject:
   - component: {fileID: 556434246}
   - component: {fileID: 556434248}
   - component: {fileID: 556434247}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5896,7 +5930,7 @@ GameObject:
   - component: {fileID: 627019432}
   - component: {fileID: 627019434}
   - component: {fileID: 627019433}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6031,7 +6065,7 @@ GameObject:
   - component: {fileID: 627170558}
   - component: {fileID: 627170560}
   - component: {fileID: 627170559}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6166,7 +6200,7 @@ GameObject:
   - component: {fileID: 635825249}
   - component: {fileID: 635825251}
   - component: {fileID: 635825250}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Can'tBuyPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6180,19 +6214,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635825248}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 88958671}
-  m_Father: {fileID: 1845879125}
-  m_RootOrder: 3
+  m_Father: {fileID: 447103560}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635825250
 MonoBehaviour:
@@ -6243,7 +6277,7 @@ GameObject:
   - component: {fileID: 661346709}
   - component: {fileID: 661346711}
   - component: {fileID: 661346710}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7063,9 +7097,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: WorkPanel
+      - m_Target: {fileID: 1635169247}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: ClickIcon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7125,7 +7159,7 @@ GameObject:
   - component: {fileID: 803921441}
   - component: {fileID: 803921440}
   - component: {fileID: 803921439}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: No_Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7197,9 +7231,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Water_NoButton
+      - m_Target: {fileID: 242116589}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: Panel_off
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7258,7 +7292,7 @@ GameObject:
   - component: {fileID: 810848552}
   - component: {fileID: 810848554}
   - component: {fileID: 810848553}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7425,7 +7459,7 @@ GameObject:
   - component: {fileID: 860783679}
   - component: {fileID: 860783678}
   - component: {fileID: 860783677}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Scrollbar Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7551,7 +7585,7 @@ GameObject:
   - component: {fileID: 865332087}
   - component: {fileID: 865332089}
   - component: {fileID: 865332088}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: About
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7771,7 +7805,7 @@ GameObject:
   - component: {fileID: 891850597}
   - component: {fileID: 891850596}
   - component: {fileID: 891850595}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: YesBuyPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7823,19 +7857,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891850594}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1685278605}
-  m_Father: {fileID: 1845879125}
-  m_RootOrder: 4
+  m_Father: {fileID: 447103560}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &924143607
 GameObject:
@@ -7983,7 +8017,7 @@ GameObject:
   - component: {fileID: 940258330}
   - component: {fileID: 940258332}
   - component: {fileID: 940258331}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldPanel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8619,7 +8653,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1047633753}
-  m_Layer: 5
+  - component: {fileID: 1047633754}
+  m_Layer: 0
   m_Name: MiniGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8641,13 +8676,31 @@ RectTransform:
   - {fileID: 1552909001}
   - {fileID: 2105732605}
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1047633754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047633752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd14e8c6b65beb47bcec7137e6943c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ic0n: 3
+  waterPanel: {fileID: 0}
+  storePanel: {fileID: 0}
+  chatPanel: {fileID: 0}
+  miniGamePanel: {fileID: 2105732602}
+  workPanel: {fileID: 0}
 --- !u!1 &1054335773
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,7 +8983,7 @@ GameObject:
   - component: {fileID: 1089136648}
   - component: {fileID: 1089136647}
   - component: {fileID: 1089136646}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9221,7 +9274,7 @@ GameObject:
   - component: {fileID: 1117207505}
   - component: {fileID: 1117207504}
   - component: {fileID: 1117207503}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: NoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9537,7 +9590,7 @@ GameObject:
   - component: {fileID: 1138566700}
   - component: {fileID: 1138566702}
   - component: {fileID: 1138566701}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9808,7 +9861,7 @@ GameObject:
   - component: {fileID: 1145697636}
   - component: {fileID: 1145697635}
   - component: {fileID: 1145697634}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9941,7 +9994,7 @@ GameObject:
   - component: {fileID: 1150259361}
   - component: {fileID: 1150259363}
   - component: {fileID: 1150259362}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10048,7 +10101,7 @@ GameObject:
   - component: {fileID: 1179703753}
   - component: {fileID: 1179703755}
   - component: {fileID: 1179703754}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10511,7 +10564,7 @@ GameObject:
   - component: {fileID: 1204811575}
   - component: {fileID: 1204811574}
   - component: {fileID: 1204811573}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: No_Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10583,9 +10636,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: MiniGamePanel_NoButton
+      - m_Target: {fileID: 1047633754}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: Panel_off
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10644,7 +10697,7 @@ GameObject:
   - component: {fileID: 1219610961}
   - component: {fileID: 1219610963}
   - component: {fileID: 1219610962}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10892,7 +10945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235300998}
-  - component: {fileID: 1235300997}
+  - component: {fileID: 1235300999}
   m_Layer: 0
   m_Name: Icon
   m_TagString: Untagged
@@ -10900,26 +10953,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1235300997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235300996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56aeaab72fb41914bb483d36729bfea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  talkPanel: {fileID: 2487479}
-  talkIcon: {fileID: 2041485951}
-  waterIcon: {fileID: 242116587}
-  storeIcon: {fileID: 1672425955}
-  minigameIcon: {fileID: 1047633752}
-  workIcon: {fileID: 1635169245}
-  coinIcon: {fileID: 2025543896}
-  nameBox: {fileID: 2062072460}
 --- !u!4 &1235300998
 Transform:
   m_ObjectHideFlags: 0
@@ -10935,6 +10968,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1235300999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235300996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56aeaab72fb41914bb483d36729bfea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterIcon: {fileID: 39326956}
+  storeIcon: {fileID: 12721414}
+  chatIcon: {fileID: 2041485951}
+  minigameIcon: {fileID: 1552909000}
+  workIcon: {fileID: 765993214}
 --- !u!1 &1269913633
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,7 +10995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269913634}
   - component: {fileID: 1269913635}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10999,7 +11049,7 @@ GameObject:
   - component: {fileID: 1284018373}
   - component: {fileID: 1284018375}
   - component: {fileID: 1284018374}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Close_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11135,7 +11185,7 @@ GameObject:
   - component: {fileID: 1319450427}
   - component: {fileID: 1319450426}
   - component: {fileID: 1319450425}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: NoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11299,7 +11349,7 @@ GameObject:
   - component: {fileID: 1343885131}
   - component: {fileID: 1343885133}
   - component: {fileID: 1343885132}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: About
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11569,7 +11619,7 @@ GameObject:
   - component: {fileID: 1355042338}
   - component: {fileID: 1355042340}
   - component: {fileID: 1355042339}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11785,7 +11835,7 @@ GameObject:
   - component: {fileID: 1404657244}
   - component: {fileID: 1404657246}
   - component: {fileID: 1404657245}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11866,7 +11916,7 @@ GameObject:
   - component: {fileID: 1417042002}
   - component: {fileID: 1417042004}
   - component: {fileID: 1417042003}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11999,7 +12049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1431063745}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Sliding Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12039,7 +12089,7 @@ GameObject:
   - component: {fileID: 1431268413}
   - component: {fileID: 1431268412}
   - component: {fileID: 1431268411}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Yes_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12123,7 +12173,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1235300997}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Icon, Assembly-CSharp
         m_MethodName: MiniGame_On
         m_Mode: 1
@@ -12184,7 +12234,7 @@ GameObject:
   - component: {fileID: 1434003772}
   - component: {fileID: 1434003774}
   - component: {fileID: 1434003773}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12512,7 +12562,7 @@ GameObject:
   - component: {fileID: 1457324101}
   - component: {fileID: 1457324100}
   - component: {fileID: 1457324099}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12728,11 +12778,11 @@ RectTransform:
   m_Children:
   - {fileID: 2062072461}
   - {fileID: 242116588}
-  - {fileID: 1047633753}
-  - {fileID: 1591723752}
   - {fileID: 1672425956}
-  - {fileID: 1935226340}
+  - {fileID: 1591723752}
+  - {fileID: 1047633753}
   - {fileID: 1635169246}
+  - {fileID: 1935226340}
   - {fileID: 1712105733}
   - {fileID: 2025543897}
   - {fileID: 1192569951}
@@ -12756,7 +12806,7 @@ GameObject:
   - component: {fileID: 1501219093}
   - component: {fileID: 1501219095}
   - component: {fileID: 1501219094}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12883,7 +12933,7 @@ GameObject:
   - component: {fileID: 1516327940}
   - component: {fileID: 1516327939}
   - component: {fileID: 1516327938}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Scroll View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13189,7 +13239,7 @@ GameObject:
   - component: {fileID: 1549268844}
   - component: {fileID: 1549268846}
   - component: {fileID: 1549268845}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13356,7 +13406,7 @@ GameObject:
   - component: {fileID: 1552909004}
   - component: {fileID: 1552909003}
   - component: {fileID: 1552909002}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: MiniGame_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13428,9 +13478,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024214009}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: MiniGamePanel
+      - m_Target: {fileID: 1047633754}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: ClickIcon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13490,7 +13540,7 @@ GameObject:
   - component: {fileID: 1554631256}
   - component: {fileID: 1554631255}
   - component: {fileID: 1554631254}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: YesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13564,7 +13614,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2024214009}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: Buy500_YesButton
+        m_MethodName: Buy2500_YesButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13758,7 +13808,7 @@ GameObject:
   - component: {fileID: 1556996231}
   - component: {fileID: 1556996233}
   - component: {fileID: 1556996232}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13893,7 +13943,7 @@ GameObject:
   - component: {fileID: 1558413249}
   - component: {fileID: 1558413251}
   - component: {fileID: 1558413250}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14052,7 +14102,7 @@ GameObject:
   - component: {fileID: 1568625980}
   - component: {fileID: 1568625979}
   - component: {fileID: 1568625978}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Close_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14124,9 +14174,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1235300997}
-        m_TargetAssemblyTypeName: Icon, Assembly-CSharp
-        m_MethodName: Talk_Off
+      - m_Target: {fileID: 1591723753}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: Panel_off
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14229,8 +14279,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1591723752}
-  m_Layer: 5
-  m_Name: Talk
+  - component: {fileID: 1591723753}
+  m_Layer: 0
+  m_Name: Chat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14258,6 +14309,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1591723753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591723751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd14e8c6b65beb47bcec7137e6943c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ic0n: 2
+  waterPanel: {fileID: 0}
+  storePanel: {fileID: 0}
+  chatPanel: {fileID: 2487479}
+  miniGamePanel: {fileID: 0}
+  workPanel: {fileID: 0}
 --- !u!1 &1601363913
 GameObject:
   m_ObjectHideFlags: 0
@@ -14270,7 +14339,7 @@ GameObject:
   - component: {fileID: 1601363917}
   - component: {fileID: 1601363916}
   - component: {fileID: 1601363915}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14403,7 +14472,7 @@ GameObject:
   - component: {fileID: 1615046780}
   - component: {fileID: 1615046782}
   - component: {fileID: 1615046781}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: About
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14537,6 +14606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635169246}
+  - component: {fileID: 1635169247}
   m_Layer: 5
   m_Name: GoWork
   m_TagString: Untagged
@@ -14559,13 +14629,31 @@ RectTransform:
   - {fileID: 765993215}
   - {fileID: 540316929}
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1635169247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635169245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd14e8c6b65beb47bcec7137e6943c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ic0n: 4
+  waterPanel: {fileID: 0}
+  storePanel: {fileID: 0}
+  chatPanel: {fileID: 0}
+  miniGamePanel: {fileID: 0}
+  workPanel: {fileID: 540316926}
 --- !u!1 &1655979121
 GameObject:
   m_ObjectHideFlags: 0
@@ -14577,7 +14665,7 @@ GameObject:
   - component: {fileID: 1655979124}
   - component: {fileID: 1655979123}
   - component: {fileID: 1655979122}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Buy?Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14629,19 +14717,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655979121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 286580466}
-  m_Father: {fileID: 1845879125}
-  m_RootOrder: 2
+  m_Father: {fileID: 447103560}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1672425955
 GameObject:
@@ -14652,7 +14740,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1672425956}
-  m_Layer: 5
+  - component: {fileID: 1672425957}
+  m_Layer: 0
   m_Name: Store
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14674,13 +14763,31 @@ RectTransform:
   - {fileID: 12721415}
   - {fileID: 1845879125}
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1672425957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672425955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd14e8c6b65beb47bcec7137e6943c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ic0n: 1
+  waterPanel: {fileID: 0}
+  storePanel: {fileID: 1845879122}
+  chatPanel: {fileID: 0}
+  miniGamePanel: {fileID: 0}
+  workPanel: {fileID: 0}
 --- !u!1 &1681348636
 GameObject:
   m_ObjectHideFlags: 0
@@ -14771,7 +14878,7 @@ GameObject:
   - component: {fileID: 1685278605}
   - component: {fileID: 1685278607}
   - component: {fileID: 1685278606}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15101,7 +15208,7 @@ GameObject:
   - component: {fileID: 1729827519}
   - component: {fileID: 1729827521}
   - component: {fileID: 1729827520}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15177,7 +15284,7 @@ GameObject:
   - component: {fileID: 1744221377}
   - component: {fileID: 1744221379}
   - component: {fileID: 1744221378}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15312,7 +15419,7 @@ GameObject:
   - component: {fileID: 1760531719}
   - component: {fileID: 1760531721}
   - component: {fileID: 1760531720}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15752,7 +15859,7 @@ GameObject:
   - component: {fileID: 1818042024}
   - component: {fileID: 1818042026}
   - component: {fileID: 1818042025}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SoldOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15887,7 +15994,7 @@ GameObject:
   - component: {fileID: 1818573752}
   - component: {fileID: 1818573754}
   - component: {fileID: 1818573753}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Water_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15967,7 +16074,7 @@ GameObject:
   - component: {fileID: 1822631766}
   - component: {fileID: 1822631768}
   - component: {fileID: 1822631767}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16238,7 +16345,7 @@ GameObject:
   - component: {fileID: 1825461102}
   - component: {fileID: 1825461101}
   - component: {fileID: 1825461100}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BuyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16371,7 +16478,7 @@ GameObject:
   - component: {fileID: 1845879125}
   - component: {fileID: 1845879124}
   - component: {fileID: 1845879123}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Store_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16430,9 +16537,7 @@ RectTransform:
   m_Children:
   - {fileID: 231143287}
   - {fileID: 1516327937}
-  - {fileID: 1655979124}
-  - {fileID: 635825249}
-  - {fileID: 891850597}
+  - {fileID: 447103560}
   m_Father: {fileID: 1672425956}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16452,7 +16557,7 @@ GameObject:
   - component: {fileID: 1854828501}
   - component: {fileID: 1854828503}
   - component: {fileID: 1854828502}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP) (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16587,7 +16692,7 @@ GameObject:
   - component: {fileID: 1856063885}
   - component: {fileID: 1856063887}
   - component: {fileID: 1856063886}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Close_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16857,7 +16962,7 @@ GameObject:
   - component: {fileID: 1864585720}
   - component: {fileID: 1864585722}
   - component: {fileID: 1864585721}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16992,7 +17097,7 @@ GameObject:
   - component: {fileID: 1870593807}
   - component: {fileID: 1870593809}
   - component: {fileID: 1870593808}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17272,7 +17377,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488437755}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17328,7 +17433,7 @@ GameObject:
   - component: {fileID: 1953473727}
   - component: {fileID: 1953473729}
   - component: {fileID: 1953473728}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17463,7 +17568,7 @@ GameObject:
   - component: {fileID: 1958311999}
   - component: {fileID: 1958312001}
   - component: {fileID: 1958312000}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17717,7 +17822,7 @@ GameObject:
   - component: {fileID: 1973305623}
   - component: {fileID: 1973305625}
   - component: {fileID: 1973305624}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18073,7 +18178,7 @@ GameObject:
   - component: {fileID: 1995391893}
   - component: {fileID: 1995391895}
   - component: {fileID: 1995391894}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18343,7 +18448,7 @@ GameObject:
   - component: {fileID: 2004794040}
   - component: {fileID: 2004794042}
   - component: {fileID: 2004794041}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18614,7 +18719,7 @@ GameObject:
   - component: {fileID: 2014787595}
   - component: {fileID: 2014787597}
   - component: {fileID: 2014787596}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18821,22 +18926,13 @@ MonoBehaviour:
   skip: {fileID: 2031578733}
   inputFieldPanel: {fileID: 0}
   onionInformaition: {fileID: 1712105732}
-  waterPanel: {fileID: 1818573751}
-  storePanel: {fileID: 1845879122}
-  miniGamePanel: {fileID: 2105732602}
   stopMiniGamePanel: {fileID: 0}
-  workPanel: {fileID: 540316926}
   workTimer: {fileID: 1363653121}
   workGetPayPanel: {fileID: 85446812}
   exitMiniGame: {fileID: 1681348636}
   clickMiniGamePanel: {fileID: 944833191}
   miniGame: {fileID: 2016064834}
   miniGame_Spawn: {fileID: 68293214}
-  buyPanel: {fileID: 1655979121}
-  cantBuyPanel: {fileID: 635825248}
-  yesBuyPanel: {fileID: 891850594}
-  purpleOnion: {fileID: 1231064267}
-  image: {fileID: 950299474}
 --- !u!1 &2025543896
 GameObject:
   m_ObjectHideFlags: 0
@@ -19093,8 +19189,8 @@ GameObject:
   - component: {fileID: 2041485955}
   - component: {fileID: 2041485954}
   - component: {fileID: 2041485953}
-  m_Layer: 5
-  m_Name: Talk_Icon
+  m_Layer: 0
+  m_Name: Chat_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19165,9 +19261,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1235300997}
-        m_TargetAssemblyTypeName: Icon, Assembly-CSharp
-        m_MethodName: Talk_On
+      - m_Target: {fileID: 1591723753}
+        m_TargetAssemblyTypeName: Icons, Assembly-CSharp
+        m_MethodName: ClickIcon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19226,7 +19322,7 @@ GameObject:
   - component: {fileID: 2062072461}
   - component: {fileID: 2062072463}
   - component: {fileID: 2062072462}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19334,7 +19430,7 @@ GameObject:
   - component: {fileID: 2103648810}
   - component: {fileID: 2103648812}
   - component: {fileID: 2103648811}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: About
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19470,7 +19566,7 @@ GameObject:
   - component: {fileID: 2105732605}
   - component: {fileID: 2105732604}
   - component: {fileID: 2105732603}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: MiniGame_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19581,7 +19677,7 @@ GameObject:
   - component: {fileID: 2122133484}
   - component: {fileID: 2122133483}
   - component: {fileID: 2122133482}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: OnionName
   m_TagString: Untagged
   m_Icon: {fileID: 0}

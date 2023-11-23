@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject settingPanel;
@@ -11,11 +12,7 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] GameObject onionInformaition;
 
-    [SerializeField] GameObject waterPanel;
-    [SerializeField] GameObject storePanel;
-    [SerializeField] GameObject miniGamePanel;
     [SerializeField] GameObject stopMiniGamePanel;
-    [SerializeField] GameObject workPanel;
 
     [SerializeField] GameObject workTimer;
     [SerializeField] GameObject workGetPayPanel;
@@ -25,15 +22,17 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject miniGame;
     [SerializeField] GameObject miniGame_Spawn;
 
-    [SerializeField] GameObject buyPanel;
+    /*[SerializeField] GameObject buyPanel;
     [SerializeField] GameObject cantBuyPanel;
     [SerializeField] GameObject yesBuyPanel;
     [SerializeField] GameObject purpleOnion;
-    [SerializeField] GameObject image;
+    [SerializeField] GameObject image;*/
 
     Water waterAnim;
     WorkTime workTime;
     DirtySpawner dirtySpawner;
+
+    bool isPanel;
 
     private void Awake()
     {
@@ -69,42 +68,6 @@ public class ButtonManager : MonoBehaviour
         onionInformaition.SetActive(false);
     }
 
-    public void WaterPanel()
-    {
-        waterPanel.SetActive(true);
-    }
-    
-    public void Water_YesButton()
-    {
-        waterPanel.SetActive(false);
-        waterAnim.Increase();
-    }
-    
-    public void Water_NoButton()
-    {
-        waterPanel.SetActive(false);
-    }
-
-    public void Store_Open()
-    {
-        storePanel.SetActive(true);
-    }
-    
-    public void Store_Close()
-    {
-        storePanel.SetActive(false);
-    }
-
-    public void MiniGamePanel()
-    {
-        miniGamePanel.SetActive(true);
-    }
-    
-    public void MiniGamePanel_NoButton()
-    {
-        miniGamePanel.SetActive(false);
-    }
-
     public void Exit_MiniGame()
     {
         stopMiniGamePanel.SetActive(true);
@@ -128,19 +91,9 @@ public class ButtonManager : MonoBehaviour
         miniGame.SetActive(true);
     }
     
-    public void WorkPanel()
-    {
-        workPanel.SetActive(true);
-    }
-
-    public void Work_NoButton()
-    {
-        workPanel.SetActive(false);
-    }
-    
     public void Work_YesButton()
     {
-        workPanel.SetActive(false);
+        //workPanel.SetActive(false);
         workTimer.SetActive(true);
     }
 
@@ -167,49 +120,26 @@ public class ButtonManager : MonoBehaviour
         miniGame_Spawn.SetActive(true);
     }
 
-    public void ClearMiniGame()
-    {
-        miniGame.SetActive(false);
-        miniGamePanel.SetActive(false);
-        ClickMiniGame();
-    }
-
-    public void Buy_NoButton()
-    {
-        buyPanel.SetActive(false);
-        yesBuyPanel.SetActive(false);
-        cantBuyPanel.SetActive(false);
-    }
-
-    public void Buy2500_YesButton()
-    {
-        if(GameManager.Instance().currentCoin >= 2500)
-        {
-            buyPanel.SetActive(true);
-            yesBuyPanel.SetActive(true);
-            purpleOnion.SetActive(true);
-        }
-
-        else
-        {
-            buyPanel.SetActive(true);
-            cantBuyPanel.SetActive(true);
-        }
-    }
     
-    public void Buy500_YesButton()
+    [System.Serializable]
+    public class BuyObject
     {
-        if(GameManager.Instance().currentCoin >= 1)
+        [System.Serializable]
+        public class Buy2500
         {
-            //buyPanel.SetActive(true);
-            yesBuyPanel.SetActive(true);
-            image.SetActive(true);
+            public GameObject buyPanel;
+            [SerializeField] GameObject cantBuyPanel;
+            [SerializeField] GameObject yesBuyPanel;
+            [SerializeField] GameObject purpleOnion;
+            [SerializeField] GameObject image;
+
+            public void ClickBuyButton() { buyPanel.SetActive(true); }
+            public void Yes()
+            {
+
+            }
         }
 
-        else
-        {
-            buyPanel.SetActive(true);
-            cantBuyPanel.SetActive(true);
-        }
     }
+
 }
