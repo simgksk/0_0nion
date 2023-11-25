@@ -6,61 +6,25 @@ using DG.Tweening;
 
 public class Water : MonoBehaviour
 {
-    Animator water;
+    [SerializeField] GameObject[] waters;
 
+    int currentWater = 0;
 
-    float playAnimTime = .1f;
-    float stopAnimTime = 3;
-
-    bool isPlayingAnim = false;
-
-    void Start()
+    private void Start()
     {
-        water = GetComponent<Animator>();
-
-        isPlayingAnim = water;
-        Decrease();
+        StartCoroutine(DecreaseWater());
     }
 
-    private void Decrease()
-    {
-        StartCoroutine(DecreaseRoutine());
-    }
-
-    IEnumerator DecreaseRoutine()
+    IEnumerator DecreaseWater()
     {
         while (true)
         {
-            water.Play("Water_Shrink");
-            isPlayingAnim = true;
-            yield return new WaitForSeconds(playAnimTime);
+            for(int i=0; i<waters.Length; i++)
+            {
+                waters[i].SetActive(false);
+                yield return new WaitForSeconds(1);
 
-            water.speed = 0;
-            isPlayingAnim = false;
-            yield return new WaitForSeconds(stopAnimTime);
-
-            water.speed = 1;
-            isPlayingAnim = true;
-            yield return new WaitForSeconds(playAnimTime);
-        }
-
-    }
-
-    public void Increase()
-    {
-        StartCoroutine(IncreaseRoutine());
-    }
-
-    IEnumerator IncreaseRoutine()
-    {
-        while (true)
-        {
-            water.SetFloat("water", -1);
-            water.Play("Water_Shrink");
-
-            yield return new WaitForSeconds(stopAnimTime);
-
-            Decrease();
+            }
         }
     }
 }

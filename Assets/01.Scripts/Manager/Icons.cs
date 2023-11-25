@@ -25,12 +25,14 @@ public class Icons : MonoBehaviour
 
     Icon icon;
     MiniGameManager miniGameManager;
+    WorkTime workTime;
 
     
     private void Awake()
     {
         icon = FindObjectOfType<Icon>();
         miniGameManager = FindObjectOfType<MiniGameManager>();
+        workTime = FindObjectOfType<WorkTime>();
     }
 
     private void Start()
@@ -117,6 +119,7 @@ public class Icons : MonoBehaviour
 
             case Ic0o0n.Work:
                 workPanel.SetActive(false);
+                workTime.Timer();
                 Debug.Log("setActive true panel lock");//잠그는 판넬 연결
                 break;
         }

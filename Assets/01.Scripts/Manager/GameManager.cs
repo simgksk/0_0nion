@@ -32,11 +32,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         currentCoin = coin;
-        InitializeGameState();
-    }
-
-    private void InitializeGameState()
-    {
         UpdateCoinText();
     }
 
@@ -53,16 +48,11 @@ public class GameManager : MonoBehaviour
 
     public int GetCoin() 
     {
+        currentCoin = coin;
         return coin;
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        UpdateCoinText();
-    }
+    
 
-    private void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    
 }

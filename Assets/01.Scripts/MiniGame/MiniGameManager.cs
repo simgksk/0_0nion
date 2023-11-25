@@ -20,7 +20,7 @@ public class MiniGameManager : MonoBehaviour
 
     public void MiniGame1()
     {
-        Instantiate(miniGame_1, transform);
+        GameObject minigame1 = Instantiate(miniGame_1, transform);
     }
 
     public void TapToStart_Button() 
