@@ -59,7 +59,7 @@ public class DirtySpawner : MonoBehaviour
 
     private void Spawn_Soil(int index)
     {
-        GameObject soil = Instantiate(soilPrefab);
+        GameObject soil = Instantiate(soilPrefab, transform);
         int rd = Random.Range(0, spawnPos.Count);
         Transform spawnPoint = spawnPos[rd];
         soil.transform.position = spawnPoint.position;
@@ -70,7 +70,7 @@ public class DirtySpawner : MonoBehaviour
     
     private void Spawn_Dust(int index)
     {
-        GameObject dust = Instantiate(dustPrefab);
+        GameObject dust = Instantiate(dustPrefab,transform);
         int rd = Random.Range(0, spawnPos.Count);
         Transform spawnPoint = spawnPos[rd];
         dust.transform.position = spawnPoint.position;
