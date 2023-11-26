@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI coinText;
-    int coin = 100;
-    public int currentCoin = 0;
+    public int coin = 100;
 
     // Singleton pattern
     static GameManager _instance = null;
@@ -27,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        currentCoin = coin;
         UpdateCoinText();
     }
 
@@ -41,14 +39,15 @@ public class GameManager : MonoBehaviour
         coin += point;
         UpdateCoinText();
     }
+    
+    public void MinusCoin(int point)
+    {
+        coin -= point;
+        UpdateCoinText();
+    }
 
     public int GetCoin() 
     {
-        currentCoin = coin;
         return coin;
     }
-
-    
-
-    
 }

@@ -32,7 +32,7 @@ public class Water : MonoBehaviour
                 if (currentWater > 20) needWater_TextBox.SetActive(true);
                 else if (currentWater <= 20) needWater_TextBox.SetActive(false); 
 
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(5);
             }
         }
     }
@@ -51,7 +51,7 @@ public class Water : MonoBehaviour
 
     IEnumerator IncreaseWaterRoutine()
     {
-        int startIncrease = Mathf.Max(0, currentWater - 3); 
+        int startIncrease = Mathf.Max(0, currentWater - 5); 
 
         while (currentWater > startIncrease)
         {
@@ -63,10 +63,10 @@ public class Water : MonoBehaviour
                     //Debug.Log(currentWater);
                     waters[i].SetActive(true);
 
-                    if (currentWater < 20)
-                        needWater_TextBox.SetActive(true);
-                    else if (currentWater >= 20)
-                        needWater_TextBox.SetActive(false);
+                    //if (currentWater < 20)
+                    //    needWater_TextBox.SetActive(true);
+                    //else if (currentWater >= 20)
+                    //    needWater_TextBox.SetActive(false);
 
                     yield return new WaitForSeconds(1);
                 }

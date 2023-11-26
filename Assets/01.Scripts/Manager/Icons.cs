@@ -118,6 +118,7 @@ public class Icons : MonoBehaviour
 
             case Ic0o0n.Work:
                 workPanel.SetActive(false);
+                GameObject worktime = Instantiate(wokeTimePrefab, transform);
                 break;
         }
     }
