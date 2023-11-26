@@ -43,6 +43,8 @@ public class Water : MonoBehaviour
         {
             StopCoroutine(decreaseCoroutine);
             decreaseCoroutine = null;
+            GameManager.Instance().AddGood(50);
+            int myResult1 = GameManager.Instance().GetGood();
         }
 
         if (increaseCoroutine == null)
@@ -62,11 +64,6 @@ public class Water : MonoBehaviour
                     currentWater -= 1;
                     //Debug.Log(currentWater);
                     waters[i].SetActive(true);
-
-                    //if (currentWater < 20)
-                    //    needWater_TextBox.SetActive(true);
-                    //else if (currentWater >= 20)
-                    //    needWater_TextBox.SetActive(false);
 
                     yield return new WaitForSeconds(1);
                 }

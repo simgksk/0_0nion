@@ -32,6 +32,10 @@ public class MiniGameManager : MonoBehaviour
     public void Clear()
     {
         Destroy(miniGame);
+        GameManager.Instance().AddCoin(200);
+        int myResult = GameManager.Instance().GetCoin();
+        GameManager.Instance().AddGood(100);
+        int myResult1 = GameManager.Instance().GetGood();
         icon.Icon_On();
     }
 

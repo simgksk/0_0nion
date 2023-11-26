@@ -10,6 +10,7 @@ TagManager:
   - Soil
   - Dust
   - MiniGamePrefab
+  - WorkTimer
   layers:
   - Default
   - TransparentFX

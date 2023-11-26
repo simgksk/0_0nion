@@ -71,6 +71,8 @@ public class WorkTime : MonoBehaviour
 
         GameManager.Instance().AddCoin(rd);
         int myResult = GameManager.Instance().GetCoin();
+        GameManager.Instance().AddGood(100);
+        int myResult1 = GameManager.Instance().GetGood();
         Destroy(work);
 
     }

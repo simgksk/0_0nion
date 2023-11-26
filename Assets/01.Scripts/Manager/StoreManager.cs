@@ -42,6 +42,8 @@ public class StoreManager : MonoBehaviour
                 if(GameManager.Instance().coin >= 2500)
                 {
                     GameManager.Instance().MinusCoin(2500);
+                    GameManager.Instance().AddGood(150);
+                    int myResult1 = GameManager.Instance().GetGood();
                     purpleOnion.SetActive(true);
                     purpleOnion_Sold.SetActive(true);
                 }
@@ -55,6 +57,8 @@ public class StoreManager : MonoBehaviour
                 if(GameManager.Instance().coin >= 2000)
                 {
                     GameManager.Instance().MinusCoin(2000);
+                    GameManager.Instance().AddGood(100);
+                    int myResult1 = GameManager.Instance().GetGood();
                     fishes.SetActive(true);
                     fishes_Sold.SetActive(true);
                 }
@@ -68,6 +72,8 @@ public class StoreManager : MonoBehaviour
                 if(GameManager.Instance().coin >= 500)
                 {
                     GameManager.Instance().MinusCoin(500);
+                    GameManager.Instance().AddGood(50);
+                    int myResult1 = GameManager.Instance().GetGood();
                     image.SetActive(true);
                     image_Sold.SetActive(true);
                 }
@@ -81,6 +87,8 @@ public class StoreManager : MonoBehaviour
                 if(GameManager.Instance().coin >= 500)
                 {
                     GameManager.Instance().MinusCoin(500);
+                    GameManager.Instance().AddGood(50);
+                    int myResult1 = GameManager.Instance().GetGood();
                     books.SetActive(true);
                     books_Sold.SetActive(true);
                 }

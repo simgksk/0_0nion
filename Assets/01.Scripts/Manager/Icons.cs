@@ -30,6 +30,9 @@ public class Icons : MonoBehaviour
     [Header("Work----------------------------------------------")]
     [SerializeField] GameObject wokeTimePrefab;
 
+    [Header("Chat----------------------------------------------")]
+    [SerializeField] GameObject chatBox;
+
     private void Awake()
     {
         icon = FindObjectOfType<Icon>();
@@ -58,7 +61,7 @@ public class Icons : MonoBehaviour
 
             case Ic0o0n.Chat:
                 chatPanel.SetActive(true);
-                icon.Icon_Off();
+                icon.Icon_Off2();
                 break;
             
             case Ic0o0n.MiniGame:
@@ -88,6 +91,7 @@ public class Icons : MonoBehaviour
             case Ic0o0n.Chat:
                 chatPanel.SetActive(false);
                 icon.Icon_On();
+                chatBox.SetActive(false);
                 break;
 
             case Ic0o0n.MiniGame:

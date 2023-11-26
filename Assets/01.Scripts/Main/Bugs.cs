@@ -62,6 +62,8 @@ public class Bugs : MonoBehaviour
                     Destroy(gameObject);
                     GameManager.Instance().AddCoin(10);
                     int myResult = GameManager.Instance().GetCoin();
+                    GameManager.Instance().AddGood(11);
+                    int myResult1 = GameManager.Instance().GetGood();
                 }
                 break;
 
@@ -74,6 +76,8 @@ public class Bugs : MonoBehaviour
                     Destroy(gameObject);
                     GameManager.Instance().AddCoin(10);
                     int myResult = GameManager.Instance().GetCoin();
+                    GameManager.Instance().AddGood(14);
+                    int myResult1 = GameManager.Instance().GetGood();
                 }
                 break;
         }

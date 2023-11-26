@@ -23,6 +23,17 @@ public class Icon : MonoBehaviour
         onion.SetActive(false);
     }
     
+    public void Icon_Off2()
+    {
+        waterIcon.SetActive(false);
+        storeIcon.SetActive(false);
+        chatIcon.SetActive(false);
+        minigameIcon.SetActive(false);
+        workIcon.SetActive(false);
+        nameBox.SetActive(false);
+        waterBox.SetActive(false);
+    }
+    
     public void Icon_On()
     {
         waterIcon.SetActive(true);
