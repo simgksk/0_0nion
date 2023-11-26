@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class MiniGameManager : MonoBehaviour
 {
-    [SerializeField] GameObject miniGame_1;
+    
     [SerializeField] GameObject panel_TapToStart;
     [SerializeField] GameObject object_Dirty;
     [SerializeField] GameObject closePanel;
+    GameObject miniGame;
 
     Icon icon;
-
-    bool isClear = true;
+    Icons icons;
 
     private void Awake()
     {
         icon = FindObjectOfType<Icon>();
+        icons = FindObjectOfType<Icons>();
+        miniGame = GameObject.FindWithTag("MiniGamePrefab");
     }
-
-    public void MiniGame1()
+    private void Start()
     {
-        GameObject minigame1 = Instantiate(miniGame_1, transform);
     }
 
     public void TapToStart_Button() 
@@ -31,7 +31,8 @@ public class MiniGameManager : MonoBehaviour
 
     public void Clear()
     {
-        Destroy(miniGame_1);
+        Destroy(miniGame);
+        icon.Icon_On();
     }
 
     public void Close_Button() { closePanel.SetActive(true); }
@@ -39,7 +40,8 @@ public class MiniGameManager : MonoBehaviour
     public void Close_Yes()
     {
         closePanel.SetActive(false);
-        Destroy(miniGame_1);
+        Destroy(miniGame);
+        icon.Icon_On();
     }
 
     public void Close_No() { closePanel.SetActive(false); }

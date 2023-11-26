@@ -21,27 +21,26 @@ public class Icons : MonoBehaviour
     [SerializeField] GameObject workPanel;
 
     [Header("MiniGame----------------------------------------------")]
-    [SerializeField] GameObject playMiniGame;
-
+    public GameObject miniGamePrefab;
     Icon icon;
     MiniGameManager miniGameManager;
     WorkTime workTime;
+    Water water;
 
-    
+    [Header("Work----------------------------------------------")]
+    [SerializeField] GameObject wokeTimePrefab;
+
     private void Awake()
     {
         icon = FindObjectOfType<Icon>();
-        miniGameManager = FindObjectOfType<MiniGameManager>();
+        miniGameManager = GetComponent<MiniGameManager>();
         workTime = FindObjectOfType<WorkTime>();
+        water = FindObjectOfType<Water>();
     }
 
     private void Start()
     {
-        /*waterPanel.SetActive(false);
-        storePanel.SetActive(false);
-        chatPanel.SetActive(false);
-        miniGamePanel.SetActive(false);
-        workPanel.SetActive(false);*/
+       
     }
 
     public void ClickIcon()
@@ -107,20 +106,18 @@ public class Icons : MonoBehaviour
         {
             case Ic0o0n.Water:
                 waterPanel.SetActive(false);
+                water.IncreaseWater();
                 Debug.Log("need water Anim"); //물주는 애니메이션
                 break;
 
             case Ic0o0n.MiniGame:
                 miniGamePanel.SetActive(false);
+                GameObject miniGame = Instantiate(miniGamePrefab);
                 icon.Icon_Off();
-                miniGameManager.MiniGame1();
-                Debug.Log("play mini game");//미니게임 연결
                 break;
 
             case Ic0o0n.Work:
                 workPanel.SetActive(false);
-                workTime.Timer();
-                Debug.Log("setActive true panel lock");//잠그는 판넬 연결
                 break;
         }
     }

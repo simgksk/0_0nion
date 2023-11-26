@@ -7,6 +7,9 @@ public class Icon : MonoBehaviour
     [SerializeField] GameObject chatIcon;
     [SerializeField] GameObject minigameIcon;
     [SerializeField] GameObject workIcon;
+    [SerializeField] GameObject nameBox;
+    [SerializeField] GameObject waterBox;
+    [SerializeField] GameObject onion;
 
     public void Icon_Off()
     {
@@ -15,6 +18,9 @@ public class Icon : MonoBehaviour
         chatIcon.SetActive(false);
         minigameIcon.SetActive(false);
         workIcon.SetActive(false);
+        nameBox.SetActive(false);
+        waterBox.SetActive(false);
+        onion.SetActive(false);
     }
     
     public void Icon_On()
@@ -24,5 +30,8 @@ public class Icon : MonoBehaviour
         chatIcon.SetActive(true);
         minigameIcon.SetActive(true);
         workIcon.SetActive(true);
+        nameBox.SetActive(true);
+        waterBox.SetActive(true);
+        onion.SetActive(true);
     }
 }

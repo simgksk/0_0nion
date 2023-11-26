@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using Random = UnityEngine.Random;
+using TMPro;
 
 public class WorkTime : MonoBehaviour
 {
@@ -10,9 +12,11 @@ public class WorkTime : MonoBehaviour
     [SerializeField] GameObject lockPanel;
     [SerializeField] GameObject FinishWork;
     public GameObject timer;
+    [SerializeField] TextMeshProUGUI payText;
     float time = 5;
     int min;
     int sec;
+    int rd;
 
     void Start()
     {
@@ -51,7 +55,18 @@ public class WorkTime : MonoBehaviour
         {
             lockPanel.SetActive(false);
             timer.SetActive(false);
+            rd = Random.Range(1000, 2000);
+            payText.text = $": {rd} $";
             FinishWork.SetActive(true);
         }
+    }
+
+    public void GetPay()
+    {
+        FinishWork.SetActive(false);
+        GameManager.Instance().AddCoin(rd);
+        int myResult = GameManager.Instance().GetCoin();
+
+        timer.SetActive(false);
     }
 }

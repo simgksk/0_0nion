@@ -9,6 +9,7 @@ TagManager:
   - Bug2
   - Soil
   - Dust
+  - MiniGamePrefab
   layers:
   - Default
   - TransparentFX
