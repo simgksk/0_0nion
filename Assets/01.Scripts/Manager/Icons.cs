@@ -26,10 +26,14 @@ public class Icons : MonoBehaviour
     MiniGameManager miniGameManager;
     WorkTime workTime;
     Water water;
+    RandomTextBox randomTextBox;
+    Onion onion;
+    InputManager inputManager;
 
     [Header("Work----------------------------------------------")]
     [SerializeField] GameObject wokeTimePrefab;
     [SerializeField] GameObject stopSound;
+    [SerializeField] GameObject onion_Information;
 
     [Header("Chat----------------------------------------------")]
     [SerializeField] GameObject chatBox;
@@ -40,6 +44,8 @@ public class Icons : MonoBehaviour
         miniGameManager = GetComponent<MiniGameManager>();
         workTime = FindObjectOfType<WorkTime>();
         water = FindObjectOfType<Water>();
+        randomTextBox = FindObjectOfType<RandomTextBox>();
+        onion = FindObjectOfType<Onion>();
         
     }
 
@@ -59,11 +65,13 @@ public class Icons : MonoBehaviour
             case Ic0o0n.Store:
                 storePanel.SetActive(true);
                 icon.Icon_Off();
+                onion_Information.GetComponentInChildren<InputManager>().enabled = false;
                 break;
 
             case Ic0o0n.Chat:
                 chatPanel.SetActive(true);
                 icon.Icon_Off2();
+                onion.enabled = false;
                 break;
             
             case Ic0o0n.MiniGame:
@@ -88,12 +96,15 @@ public class Icons : MonoBehaviour
             case Ic0o0n.Store:
                 storePanel.SetActive(false);
                 icon.Icon_On();
+                onion_Information.GetComponentInChildren<InputManager>().enabled = true;
                 break;
 
             case Ic0o0n.Chat:
                 chatPanel.SetActive(false);
                 icon.Icon_On();
                 chatBox.SetActive(false);
+                randomTextBox.RandomTextBoxs_Off();
+                onion.enabled = true;
                 break;
 
             case Ic0o0n.MiniGame:
@@ -126,13 +137,21 @@ public class Icons : MonoBehaviour
                 workPanel.SetActive(false);
                 GameObject worktime = Instantiate(wokeTimePrefab, transform);
                 stopSound.SetActive(false);
+                onion_Information.GetComponentInChildren<InputManager>().enabled = false;
                 Invoke("SoundPlay", 12);
+                Invoke("InformationOn", 20);
                 break;
         }
     }
 
     void SoundPlay()
     {
+        onion_Information.GetComponentInChildren<InputManager>().enabled = true;
         stopSound.SetActive(true);
+    }
+    
+    void InformationOn()
+    {
+        onion_Information.GetComponentInChildren<InputManager>().enabled = true;
     }
 }

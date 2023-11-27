@@ -42,17 +42,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 1
-  spriteBorder: {x: 459, y: 469, z: 365, w: 454}
+  spriteBorder: {x: 400, y: 469, z: 365, w: 454}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -127,8 +127,33 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: UI_2_0
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 365
+        width: 687
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 106, y: 128, z: 146, w: 115}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d055d31455eb947afd2229d89e451e
+      internalID: -2046714139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -7, y: -633}
+      - {x: -7, y: -321}
+      - {x: 35, y: -321}
+      - {x: 35, y: -633}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -138,7 +163,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_2_0: -2046714139
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

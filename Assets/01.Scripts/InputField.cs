@@ -17,12 +17,9 @@ public class InputField : MonoBehaviour
 
     public void Enter()
     {
-        //inputTextP.SetActive(false);
         textBox.RandomTextBoxs();
-    }
-
-    public void Click()
-    {
-        //inputTextP.SetActive(true); 
+        int rd = Random.Range(5, 20);
+        GameManager.Instance().AddGood(rd);
+        int myResult1 = GameManager.Instance().GetGood();
     }
 }

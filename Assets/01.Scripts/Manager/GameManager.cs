@@ -93,6 +93,9 @@ public class GameManager : MonoBehaviour
         {
             onions[0].SetActive(false);
             onions[1].SetActive(true);
+            onions[2].SetActive(false);
+            onions[3].SetActive(false);
+
 
             texts[0].SetActive(false);
             texts[1].SetActive(true);
@@ -102,8 +105,10 @@ public class GameManager : MonoBehaviour
         
         if(good >= 666)
         {
+            onions[0].SetActive(false);
             onions[1].SetActive(false);
             onions[2].SetActive(true);
+            onions[3].SetActive(false);
 
             texts[0].SetActive(false);
             texts[1].SetActive(false);
@@ -113,6 +118,8 @@ public class GameManager : MonoBehaviour
         
         if(good >= 999)
         {
+            onions[0].SetActive(false);
+            onions[1].SetActive(false);
             onions[2].SetActive(false);
             onions[3].SetActive(true);
 
