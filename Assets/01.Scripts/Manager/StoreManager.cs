@@ -6,7 +6,9 @@ public enum Objects
 {
     Purple,
     Fishes,
-    Image,
+    Image1,
+    Image2,
+    Image3,
     Books
 }
 
@@ -24,10 +26,20 @@ public class StoreManager : MonoBehaviour
     [SerializeField] GameObject fishes_Sold;
     [SerializeField] GameObject fishes_CantBuy;
 
-    [Header("Image----------------------------------------------")]
-    [SerializeField] GameObject image;
-    [SerializeField] GameObject image_Sold;
-    [SerializeField] GameObject image_CantBuy;
+    [Header("Image1----------------------------------------------")]
+    [SerializeField] GameObject image1;
+    [SerializeField] GameObject image1_Sold;
+    [SerializeField] GameObject image1_CantBuy;
+    
+    [Header("Image2----------------------------------------------")]
+    [SerializeField] GameObject image2;
+    [SerializeField] GameObject image2_Sold;
+    [SerializeField] GameObject image2_CantBuy;
+    
+    [Header("Image3----------------------------------------------")]
+    [SerializeField] GameObject image3;
+    [SerializeField] GameObject image3_Sold;
+    [SerializeField] GameObject image3_CantBuy;
 
     [Header("Book----------------------------------------------")]
     [SerializeField] GameObject books;
@@ -68,18 +80,48 @@ public class StoreManager : MonoBehaviour
                 }
                 break;
             
-            case Objects.Image:
+            case Objects.Image1:
                 if(GameManager.Instance().coin >= 500)
                 {
                     GameManager.Instance().MinusCoin(500);
                     GameManager.Instance().AddGood(50);
                     int myResult1 = GameManager.Instance().GetGood();
-                    image.SetActive(true);
-                    image_Sold.SetActive(true);
+                    image1.SetActive(true);
+                    image1_Sold.SetActive(true);
                 }
                 else
                 {
-                    image_CantBuy.SetActive(true);
+                    image1_CantBuy.SetActive(true);
+                }
+                break;
+            
+            case Objects.Image2:
+                if(GameManager.Instance().coin >= 500)
+                {
+                    GameManager.Instance().MinusCoin(500);
+                    GameManager.Instance().AddGood(50);
+                    int myResult1 = GameManager.Instance().GetGood();
+                    image2.SetActive(true);
+                    image2_Sold.SetActive(true);
+                }
+                else
+                {
+                    image2_CantBuy.SetActive(true);
+                }
+                break; 
+            
+            case Objects.Image3:
+                if(GameManager.Instance().coin >= 500)
+                {
+                    GameManager.Instance().MinusCoin(500);
+                    GameManager.Instance().AddGood(50);
+                    int myResult1 = GameManager.Instance().GetGood();
+                    image3.SetActive(true);
+                    image3_Sold.SetActive(true);
+                }
+                else
+                {
+                    image3_CantBuy.SetActive(true);
                 }
                 break;
             
@@ -113,8 +155,16 @@ public class StoreManager : MonoBehaviour
                 fishes_CantBuy.SetActive(false);
                 break;
             
-            case Objects.Image:
-                image_CantBuy.SetActive(false);
+            case Objects.Image1:
+                image1_CantBuy.SetActive(false);
+                break; 
+            
+            case Objects.Image2:
+                image2_CantBuy.SetActive(false);
+                break;
+            
+            case Objects.Image3:
+                image3_CantBuy.SetActive(false);
                 break; 
             
             case Objects.Books:

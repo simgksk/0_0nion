@@ -29,6 +29,7 @@ public class Icons : MonoBehaviour
 
     [Header("Work----------------------------------------------")]
     [SerializeField] GameObject wokeTimePrefab;
+    [SerializeField] GameObject stopSound;
 
     [Header("Chat----------------------------------------------")]
     [SerializeField] GameObject chatBox;
@@ -39,6 +40,7 @@ public class Icons : MonoBehaviour
         miniGameManager = GetComponent<MiniGameManager>();
         workTime = FindObjectOfType<WorkTime>();
         water = FindObjectOfType<Water>();
+        
     }
 
     private void Start()
@@ -123,7 +125,14 @@ public class Icons : MonoBehaviour
             case Ic0o0n.Work:
                 workPanel.SetActive(false);
                 GameObject worktime = Instantiate(wokeTimePrefab, transform);
+                stopSound.SetActive(false);
+                Invoke("SoundPlay", 12);
                 break;
         }
+    }
+
+    void SoundPlay()
+    {
+        stopSound.SetActive(true);
     }
 }

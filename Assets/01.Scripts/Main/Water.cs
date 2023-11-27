@@ -13,7 +13,11 @@ public class Water : MonoBehaviour
 
     Coroutine decreaseCoroutine;
     Coroutine increaseCoroutine;
-    
+
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
         decreaseCoroutine = StartCoroutine(DecreaseWaterRoutine());
@@ -62,8 +66,9 @@ public class Water : MonoBehaviour
                 if (i < waters.Length)
                 {
                     currentWater -= 1;
-                    //Debug.Log(currentWater);
+                    
                     waters[i].SetActive(true);
+
 
                     yield return new WaitForSeconds(1);
                 }

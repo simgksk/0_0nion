@@ -121,5 +121,10 @@ public class GameManager : MonoBehaviour
             texts[2].SetActive(false);
             texts[3].SetActive(true);
         }
+        
+        if(good >= 1111)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }

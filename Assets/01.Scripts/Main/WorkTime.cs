@@ -74,6 +74,5 @@ public class WorkTime : MonoBehaviour
         GameManager.Instance().AddGood(100);
         int myResult1 = GameManager.Instance().GetGood();
         Destroy(work);
-
     }
 }

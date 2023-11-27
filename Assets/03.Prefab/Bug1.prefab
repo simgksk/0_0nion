@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bug: 0
+  hitBug: {fileID: 0}
 --- !u!114 &1059678389052404047
 MonoBehaviour:
   m_ObjectHideFlags: 0

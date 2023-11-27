@@ -59,6 +59,7 @@ MonoBehaviour:
   finishWork: {fileID: 4931455559811189717}
   timer: {fileID: 4931455560371092597}
   payText: {fileID: 4931455560784811036}
+  playSound: {fileID: 6324756942397454717, guid: 668bce5f27c051242850fab7e4619177, type: 3}
 --- !u!1 &4931455559719688300
 GameObject:
   m_ObjectHideFlags: 0

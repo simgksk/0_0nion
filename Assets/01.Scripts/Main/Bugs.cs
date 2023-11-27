@@ -19,6 +19,8 @@ public class Bugs : MonoBehaviour
     Vector2 pos_Bug2;
     RaycastHit2D hit_Bug2;
 
+    [SerializeField] AudioSource hitBug;
+
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
