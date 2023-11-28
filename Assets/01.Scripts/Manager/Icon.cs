@@ -10,6 +10,7 @@ public class Icon : MonoBehaviour
     [SerializeField] GameObject nameBox;
     [SerializeField] GameObject waterBox;
     [SerializeField] GameObject onion;
+    [SerializeField] GameObject bgm;
 
     public void Icon_Off()
     {
@@ -43,6 +44,30 @@ public class Icon : MonoBehaviour
         workIcon.SetActive(true);
         nameBox.SetActive(true);
         waterBox.SetActive(true);
+        onion.SetActive(true);
+    }
+    
+    public void Icon_On2()
+    {
+        waterIcon.SetActive(true);
+        storeIcon.SetActive(true);
+        chatIcon.SetActive(true);
+        minigameIcon.SetActive(true);
+        workIcon.SetActive(true);
+        nameBox.SetActive(true);
+        //waterBox.SetActive(true);
+        onion.SetActive(true);
+    }
+    
+    public void Icon_On3()
+    {
+        waterIcon.SetActive(true);
+        storeIcon.SetActive(true);
+        chatIcon.SetActive(true);
+        minigameIcon.SetActive(true);
+        workIcon.SetActive(true);
+        nameBox.SetActive(true);
+        bgm.SetActive(true);
         onion.SetActive(true);
     }
 }

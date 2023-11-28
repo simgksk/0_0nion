@@ -9,6 +9,7 @@ public class MiniGameManager : MonoBehaviour
     [SerializeField] GameObject object_Dirty;
     [SerializeField] GameObject closePanel;
     GameObject miniGame;
+    [SerializeField] GameObject miniGameSound;
 
     Icon icon;
     Icons icons;
@@ -21,6 +22,7 @@ public class MiniGameManager : MonoBehaviour
     }
     private void Start()
     {
+        miniGameSound.SetActive(true);
     }
 
     public void TapToStart_Button() 
@@ -36,7 +38,8 @@ public class MiniGameManager : MonoBehaviour
         int myResult = GameManager.Instance().GetCoin();
         GameManager.Instance().AddGood(100);
         int myResult1 = GameManager.Instance().GetGood();
-        icon.Icon_On();
+        icon.Icon_On2();
+        icon.Icon_On3();
     }
 
     public void Close_Button() { closePanel.SetActive(true); }
@@ -44,8 +47,9 @@ public class MiniGameManager : MonoBehaviour
     public void Close_Yes()
     {
         closePanel.SetActive(false);
+        miniGameSound.SetActive(false);
         Destroy(miniGame);
-        icon.Icon_On();
+        icon.Icon_On3();
     }
 
     public void Close_No() { closePanel.SetActive(false); }

@@ -11,6 +11,7 @@ TagManager:
   - Dust
   - MiniGamePrefab
   - WorkTimer
+  - BGM
   layers:
   - Default
   - TransparentFX

@@ -10,9 +10,16 @@ public class DirtySpawner : MonoBehaviour
     [SerializeField] GameObject soilPrefab;
     [SerializeField] GameObject dustPrefab;
     [SerializeField] GameObject clearPanel;
+    [SerializeField] GameObject clearOnion;
+    [SerializeField] GameObject dirtyOnion;
 
     List<Transform> spawnPos = new List<Transform>();
     List<GameObject> spawnPrefabs = new List<GameObject>();
+
+
+    private void Awake()
+    {
+    }
 
     private void Start()
     {
@@ -50,9 +57,12 @@ public class DirtySpawner : MonoBehaviour
     {
         yield return new WaitUntil(() => AllPrefabsDestroyed());
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
+        dirtyOnion.SetActive(false);
+        clearOnion.SetActive(true);
+        yield return new WaitForSeconds(.7f);
         clearPanel.SetActive(true);
-
+        
         GameManager.Instance().AddCoin(500);
         int myResult = GameManager.Instance().GetCoin();
     }

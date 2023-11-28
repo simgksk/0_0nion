@@ -12,6 +12,8 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] GameObject onionInformaition;
 
+    [SerializeField] GameObject exitPanelInMain;
+
 
     private void Awake()
     {
@@ -27,5 +29,13 @@ public class ButtonManager : MonoBehaviour
     public void Skip_Button() { inputFieldPanel.SetActive(true); }
 
     public void Informaition_Close() { onionInformaition.SetActive(false); }
+
+    public void ExitInMain() { exitPanelInMain.SetActive(true); }
+    public void ExitInMain_No() { exitPanelInMain.SetActive(false); }
+    public void ExitInMain_Yes()
+    {
+        exitPanelInMain.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
 
 }

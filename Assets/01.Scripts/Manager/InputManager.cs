@@ -6,7 +6,11 @@ using System;
 public class InputManager : MonoBehaviour
 {
     public Action onMouseDown;
+    public Action onMouseDown_Bug;
     public Action onGetKey_Esc;
+
+
+
 
     void Update()
     {

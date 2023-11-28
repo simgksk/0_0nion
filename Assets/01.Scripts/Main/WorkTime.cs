@@ -14,10 +14,12 @@ public class WorkTime : MonoBehaviour
     int sec;
     int rd;
     GameObject work;
-
+    Icons icons;
     private void Awake()
     {
         work = GameObject.FindWithTag("WorkTimer");
+        icons = FindObjectOfType<Icons>();
+        
     }
 
     void Start()
@@ -26,6 +28,7 @@ public class WorkTime : MonoBehaviour
         timeText[0].text = "00";
         timeText[1].text = "00";
         rd = Random.Range(1000, 2000);
+        icons.False();
     }
 
     public void Update()

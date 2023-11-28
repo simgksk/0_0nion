@@ -24,6 +24,7 @@ public class Bugs : MonoBehaviour
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
+        hitBug = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -61,6 +62,7 @@ public class Bugs : MonoBehaviour
 
                 if (hit_Bug1.collider != null && hit_Bug1.collider.CompareTag("Bug1"))
                 {
+                    hitBug.Play();
                     Destroy(gameObject);
                     GameManager.Instance().AddCoin(10);
                     int myResult = GameManager.Instance().GetCoin();
@@ -75,6 +77,7 @@ public class Bugs : MonoBehaviour
 
                 if (hit_Bug2.collider != null && hit_Bug2.collider.CompareTag("Bug2"))
                 {
+                    hitBug.Play();
                     Destroy(gameObject);
                     GameManager.Instance().AddCoin(10);
                     int myResult = GameManager.Instance().GetCoin();

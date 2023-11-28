@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] onions;
     [SerializeField] GameObject[] texts;
 
+    AudioSource levelUp;
+
     // Singleton pattern
     static GameManager _instance = null;
     public static GameManager Instance() { return _instance; }
@@ -29,7 +31,8 @@ public class GameManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        
+
+        levelUp = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -91,6 +94,8 @@ public class GameManager : MonoBehaviour
         
         if(good >= 333)
         {
+            levelUp.Play();
+
             onions[0].SetActive(false);
             onions[1].SetActive(true);
             onions[2].SetActive(false);
@@ -105,6 +110,7 @@ public class GameManager : MonoBehaviour
         
         if(good >= 666)
         {
+            levelUp.Play();
             onions[0].SetActive(false);
             onions[1].SetActive(false);
             onions[2].SetActive(true);
@@ -118,6 +124,7 @@ public class GameManager : MonoBehaviour
         
         if(good >= 999)
         {
+            levelUp.Play();
             onions[0].SetActive(false);
             onions[1].SetActive(false);
             onions[2].SetActive(false);

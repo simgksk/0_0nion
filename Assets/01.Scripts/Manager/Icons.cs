@@ -37,6 +37,7 @@ public class Icons : MonoBehaviour
 
     [Header("Chat----------------------------------------------")]
     [SerializeField] GameObject chatBox;
+    
 
     private void Awake()
     {
@@ -95,14 +96,14 @@ public class Icons : MonoBehaviour
 
             case Ic0o0n.Store:
                 storePanel.SetActive(false);
-                icon.Icon_On();
+                icon.Icon_On2();
                 onion_Information.GetComponentInChildren<InputManager>().enabled = true;
                 break;
 
             case Ic0o0n.Chat:
                 chatPanel.SetActive(false);
-                icon.Icon_On();
-                chatBox.SetActive(false);
+                icon.Icon_On2();
+                //chatBox.SetActive(false);
                 randomTextBox.RandomTextBoxs_Off();
                 onion.enabled = true;
                 break;
@@ -131,24 +132,36 @@ public class Icons : MonoBehaviour
                 miniGamePanel.SetActive(false);
                 GameObject miniGame = Instantiate(miniGamePrefab);
                 icon.Icon_Off();
+                stopSound.SetActive(false);
                 break;
 
             case Ic0o0n.Work:
                 workPanel.SetActive(false);
                 GameObject worktime = Instantiate(wokeTimePrefab, transform);
                 stopSound.SetActive(false);
-                onion_Information.GetComponentInChildren<InputManager>().enabled = false;
+                False();
                 Invoke("SoundPlay", 12);
                 Invoke("InformationOn", 20);
                 break;
         }
     }
 
-    void SoundPlay()
+    public void False()
+    {
+        onion_Information.GetComponentInChildren<InputManager>().enabled = false;
+    }
+
+    public void SoundPlay()
     {
         onion_Information.GetComponentInChildren<InputManager>().enabled = true;
         stopSound.SetActive(true);
     }
+    
+    public void SoundPlay2()
+    {
+        stopSound.SetActive(true);
+    }
+    
     
     void InformationOn()
     {
